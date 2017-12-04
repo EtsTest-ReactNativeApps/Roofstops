@@ -4534,6 +4534,10 @@ react-native-gesture-handler@^1.0.0-alpha.35:
     invariant "^2.2.2"
     prop-types "^15.5.10"
 
+react-native-google-analytics-bridge@^5.4.1:
+  version "5.4.1"
+  resolved "https://registry.yarnpkg.com/react-native-google-analytics-bridge/-/react-native-google-analytics-bridge-5.4.1.tgz#fd5dacb86436b7e08f1972a8205229ada2ea2abf"
+
 react-native-maps@0.17.1:
   version "0.17.1"
   resolved "https://registry.yarnpkg.com/react-native-maps/-/react-native-maps-0.17.1.tgz#ab2236341fd984dac8864202ae55331bc262f60c"
