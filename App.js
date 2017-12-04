@@ -6,18 +6,19 @@ import Weather from './src/components/Weather';
 // import Analytics from './src/components/Analytics'; Will include this back in when google analytics updates
 
 import Navi from './src/components/Navi';
-
+import Header from './src/components/Header';
 
 
 export default class App extends React.Component {
   constructor(props){
     super(props)
 
-    this.state = {gotoRoofstops: false}
+    this.state = {gotoRoofstops: false, removeSearch: true}
   }
 
 gotoRoofstops = () => {
-  this.setState({gotoRoofstops: true})
+  this.setState({gotoRoofstops: true, removeSearch: false})
+
 }
 
   render() {
@@ -25,12 +26,18 @@ gotoRoofstops = () => {
 
           <View style={styles.container}>
             <ScrollView>
-              { 
+              <Header />
+              {
                 this.state.gotoRoofstops ? <Rooftops /> : null
               }
 
-              <LandingSearch gotoRoofstops = {this.gotoRoofstops}/>
+              
+              
+              {
+                this.state.removeSearch ? <LandingSearch gotoRoofstops = {this.gotoRoofstops}/> :  null
+              }
               <Weather />
+
             </ScrollView>
           </View>
 
