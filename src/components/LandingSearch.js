@@ -23,9 +23,7 @@ export default class LandingSearch extends React.Component {
     this.setState({zipcode: event.nativeEvent.text})
   }
 
-  handleSubmit() {
-    this.setState({isLoading: true})
-  }
+  
   
   onChanged(text) {
     let newText = '';
@@ -52,8 +50,7 @@ export default class LandingSearch extends React.Component {
         <TouchableHighlight
           style={styles.button}
           onPress={this
-          .handleSubmit
-          .bind(this)}
+          .props.gotoRoofstops}
           underlayColor="white">
           <Text style={styles.buttonText}>SEARCH</Text>
         </TouchableHighlight>

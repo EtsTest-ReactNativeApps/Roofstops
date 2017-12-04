@@ -1,29 +1,33 @@
 import React from 'react';
-import { StyleSheet, Text, View, Scrollview } from 'react-native';
+import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import LandingSearch from './src/components/LandingSearch';
-import Header from './src/components/Header';
-import { ScrollView } from 'react-native';
+import Rooftops from './src/components/Rooftops';
 
 
 export default class App extends React.Component {
-  
+  constructor(props){
+    super(props)
+
+    this.state = {gotoRoofstops: false}
+  }
+
+gotoRoofstops = () => {
+  this.setState({gotoRoofstops: true})
+}
 
   render() {
     return (
-      
-      <View style={styles.container}>
-      <ScrollView>
-      <Header
-        initialRoute={{
-          component: Header,
-          title: 'Roof Stops'
-        }}
-        style={styles.container}
-      />
-      <LandingSearch />
-      </ScrollView>
-    </View>
-    
+
+          <View style={styles.container}>
+            <ScrollView>
+              { 
+                this.state.gotoRoofstops ? <Rooftops /> : null
+              }
+
+              <LandingSearch gotoRoofstops = {this.gotoRoofstops}/>
+            </ScrollView>
+          </View>
+
 
     );
   }

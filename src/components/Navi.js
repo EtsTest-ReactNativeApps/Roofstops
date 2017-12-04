@@ -10,7 +10,7 @@ const initialLayout = {
 const FirstRoute = () => <View style={[ styles.container, { backgroundColor: '#ff4081' } ]} />;
 const SecondRoute = () => <View style={[ styles.container, { backgroundColor: '#673ab7' } ]} />;
 
-export default class Header extends PureComponent {
+export default class Navi extends PureComponent {
   state = {
     index: 0,
     routes: [
