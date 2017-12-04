@@ -1,27 +1,21 @@
 import React from 'react';
 import { StyleSheet, Text, View, Scrollview } from 'react-native';
 import LandingSearch from './src/components/LandingSearch';
-import Header from './src/components/Header';
+import Nav from './src/components/Nav';
 import { ScrollView } from 'react-native';
 
 
 export default class App extends React.Component {
   render() {
     return (
-      
+
       <View style={styles.container}>
       <ScrollView>
-      <Header
-        initialRoute={{
-          component: Header,
-          title: 'Roof Stops'
-        }}
-        style={styles.container}
-      />
+
       <LandingSearch />
       </ScrollView>
     </View>
-    
+
 
     );
   }
