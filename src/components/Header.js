@@ -14,8 +14,8 @@ export default class Header extends PureComponent {
   state = {
     index: 0,
     routes: [
-      { key: 'first', title: 'First' },
-      { key: 'second', title: 'Second' },
+      { key: 'first', title: 'Search' },
+      { key: 'second', title: 'List View' },
     ],
   };
 
