@@ -1,13 +1,16 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Scrollview } from 'react-native';
 import LandingSearch from './src/components/LandingSearch';
 import Header from './src/components/Header';
+import { ScrollView } from 'react-native';
+
 
 export default class App extends React.Component {
   render() {
     return (
-
+      
       <View style={styles.container}>
+      <ScrollView>
       <Header
         initialRoute={{
           component: Header,
@@ -16,7 +19,9 @@ export default class App extends React.Component {
         style={styles.container}
       />
       <LandingSearch />
+      </ScrollView>
     </View>
+    
 
     );
   }

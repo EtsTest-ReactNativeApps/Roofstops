@@ -45,6 +45,6 @@ export default class Header extends PureComponent {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 35,
+    marginTop: 20,
   },
 });
