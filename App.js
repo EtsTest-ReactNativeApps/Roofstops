@@ -1,14 +1,23 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import LandingSearch from './src/components/LandingSearch';
+import Header from './src/components/Header';
 
 export default class App extends React.Component {
   render() {
     return (
+
       <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
-      </View>
+      <Header
+        initialRoute={{
+          component: Header,
+          title: 'Roof Stops'
+        }}
+        style={styles.container}
+      />
+      <LandingSearch />
+    </View>
+
     );
   }
 }
@@ -16,7 +25,7 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#2F2D32',
     alignItems: 'center',
     justifyContent: 'center',
   },
