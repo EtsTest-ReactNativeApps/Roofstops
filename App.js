@@ -10,8 +10,8 @@ import Header from './src/components/Header';
 
 
 export default class App extends React.Component {
-  constructor(props){
-    super(props)
+  constructor(){
+    super()
 
     this.state = {gotoRoofstops: false, removeSearch: true, weatherComponent: false}
   }
@@ -29,16 +29,12 @@ gotoRoofstops = () => {
               <Header />
               {
                 this.state.gotoRoofstops ? <Rooftops /> : null
-              }
-
-              
-              
+              }           
               {
                 this.state.removeSearch ? <LandingSearch gotoRoofstops = {this.gotoRoofstops}/> :  null
               }
               {
-                this.state.weatherComponent ? 
-                <Weather /> : null
+                this.state.weatherComponent ? <Weather /> : null
               }
 
             </ScrollView>
