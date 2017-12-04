@@ -1,50 +1,31 @@
-import React, { PureComponent } from 'react';
-import { View, StyleSheet, Dimensions } from 'react-native';
-import { TabViewAnimated, TabBar, SceneMap } from 'react-native-tab-view';
+import React from 'react';
+import { StyleSheet, Text, ScrollView, View, Image } from 'react-native';
 
-const initialLayout = {
-  height: 0,
-  width: Dimensions.get('window').width,
-};
 
-const FirstRoute = () => <View style={[ styles.container, { backgroundColor: '#ff4081' } ]} />;
-const SecondRoute = () => <View style={[ styles.container, { backgroundColor: '#673ab7' } ]} />;
+export default class Header extends React.Component {
+  constructor(props){
+    super(props)
 
-export default class Header extends PureComponent {
-  state = {
-    index: 0,
-    routes: [
-      { key: 'first', title: 'Search' },
-      { key: 'second', title: 'List View' },
-    ],
-  };
+}
+render() {
+  return (
 
-  _handleIndexChange = index => this.setState({ index });
+        <View style={styles.container}>
+          <ScrollView/>
+          <Image
+            style ={{marginTop:20}}source={require("../../images/roofstops-logo-2.png")} />
+        </View>
 
-  _renderHeader = props => <TabBar {...props} />;
 
-  _renderScene = SceneMap({
-    first: FirstRoute,
-    second: SecondRoute,
-  });
-
-  render() {
-    return (
-      <TabViewAnimated
-        style={styles.container}
-        navigationState={this.state}
-        renderScene={this._renderScene}
-        renderHeader={this._renderHeader}
-        onIndexChange={this._handleIndexChange}
-        initialLayout={initialLayout}
-      />
-    );
-  }
+  );
+}
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    marginTop: 20,
-  },
+container: {
+  flex: 1,
+  backgroundColor: '#2F2D32',
+  alignItems: 'center',
+  justifyContent: 'center',
+},
 });

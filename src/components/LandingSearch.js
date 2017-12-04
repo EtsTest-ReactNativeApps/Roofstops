@@ -26,7 +26,7 @@ export default class LandingSearch extends React.Component {
   handleSubmit() {
     this.setState({isLoading: true})
   }
-  
+
   onChanged(text) {
     let newText = '';
     let numbers = '0123456789';
@@ -47,13 +47,11 @@ export default class LandingSearch extends React.Component {
         <Text style={styles.text}>Find Your Roof</Text>
         <TextInput style={styles.textInput} keyboardType='numeric' onChangeText={(text) => this.onChanged(text)} value={this.state.myNumber} maxLength={10} style={styles.input} value={this.state.zipcode} onChange={this
           .handleSearch
-          .bind(this)} 
+          .bind(this)}
         />
         <TouchableHighlight
           style={styles.button}
-          onPress={this
-          .handleSubmit
-          .bind(this)}
+          onPress={this.props.gotoRoofstops}
           underlayColor="white">
           <Text style={styles.buttonText}>SEARCH</Text>
         </TouchableHighlight>
