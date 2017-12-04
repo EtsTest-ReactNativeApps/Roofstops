@@ -1,16 +1,30 @@
 import React from 'react';
-import Review from './src/components/Review';
+import { StyleSheet, Text, View, Scrollview } from 'react-native';
+import LandingSearch from './src/components/LandingSearch';
+import Header from './src/components/Header';
+import { ScrollView } from 'react-native';
 
-import { StyleSheet, Text, View } from 'react-native';
 
 export default class App extends React.Component {
   
 
   render() {
     return (
-      <View>
-        <Review />
-      </View>
+      
+      <View style={styles.container}>
+      <ScrollView>
+      <Header
+        initialRoute={{
+          component: Header,
+          title: 'Roof Stops'
+        }}
+        style={styles.container}
+      />
+      <LandingSearch />
+      </ScrollView>
+    </View>
+    
+
     );
   }
 }
@@ -18,7 +32,7 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'grey',
+    backgroundColor: '#2F2D32',
     alignItems: 'center',
     justifyContent: 'center',
   },
