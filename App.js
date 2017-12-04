@@ -1,10 +1,10 @@
 import React from 'react';
 import { StyleSheet, Text, ScrollView, View } from 'react-native';
 import LandingSearch from './src/components/LandingSearch';
-import Header from './src/components/Header';
+import Rooftops from './src/components/Rooftops'
 // import Analytics from './src/components/Analytics'; Will include this back in when google analytics updates
 
-import Nav from './src/components/Nav';
+import Navi from './src/components/Navi';
 
 
 
