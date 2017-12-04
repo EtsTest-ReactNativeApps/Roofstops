@@ -12,11 +12,12 @@ export default class App extends React.Component {
   constructor(props){
     super(props)
 
-    this.state = {gotoRoofstops: false}
+    this.state = {gotoRoofstops: false, removeSearch: true}
   }
 
 gotoRoofstops = () => {
-  this.setState({gotoRoofstops: true})
+  this.setState({gotoRoofstops: true, removeSearch: false})
+  
 }
 
   render() {
@@ -28,7 +29,11 @@ gotoRoofstops = () => {
                 this.state.gotoRoofstops ? <Rooftops /> : null
               }
 
-              <LandingSearch gotoRoofstops = {this.gotoRoofstops}/>
+              {
+                this.state.removeSearch ? <LandingSearch gotoRoofstops = {this.gotoRoofstops}/> :  null
+              }
+
+             
             </ScrollView>
           </View>
 
