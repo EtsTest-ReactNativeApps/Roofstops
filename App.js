@@ -1,14 +1,30 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Scrollview } from 'react-native';
+import LandingSearch from './src/components/LandingSearch';
+import Header from './src/components/Header';
+import { ScrollView, Image } from 'react-native';
+
 
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Working?</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
-      </View>
+    <View style={styles.container}>
+      <Image
+         source={require('./images/roofstops-logo-2.png')}
+       />
+      <ScrollView>
+      <Header
+        initialRoute={{
+          component: Header,
+          title: 'Roof Stops'
+        }}
+        style={styles.container}
+      />
+      <LandingSearch />
+      </ScrollView>
+    </View>
+
+
     );
   }
 }
@@ -16,7 +32,7 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#2F2D32',
     alignItems: 'center',
     justifyContent: 'center',
   },
