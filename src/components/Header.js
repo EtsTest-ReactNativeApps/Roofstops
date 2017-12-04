@@ -13,7 +13,7 @@ render() {
         <View style={styles.container}>
           <ScrollView/>
           <Image
-            style ={{marginTop:20}}source={require("../../images/roofstops-logo-2.png")} />
+            style ={{marginTop:20, marginBottom:10}}source={require("../../images/roofstops-logo-2.png")} />
         </View>
 
 

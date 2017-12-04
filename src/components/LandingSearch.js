@@ -45,7 +45,7 @@ export default class LandingSearch extends React.Component {
     return (
       <View style={styles.mainContainer}>
         <Text style={styles.text}>Find Your Roof</Text>
-        <TextInput style={styles.textInput} keyboardType='numeric' onChangeText={(text) => this.onChanged(text)} value={this.state.myNumber} maxLength={10} style={styles.input} value={this.state.zipcode} onChange={this
+        <TextInput style={styles.textInput} keyboardType='numeric' onChangeText={(text) => this.onChanged(text)} value={this.state.myNumber} maxLength={5} style={styles.input} value={this.state.zipcode} onChange={this
           .handleSearch
           .bind(this)}
         />
