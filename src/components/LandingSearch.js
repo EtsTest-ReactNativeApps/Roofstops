@@ -51,9 +51,7 @@ export default class LandingSearch extends React.Component {
         />
         <TouchableHighlight
           style={styles.button}
-          onPress={this
-          .handleSubmit
-          .bind(this)}
+          onPress={this.props.gotoRoofstops}
           underlayColor="white">
           <Text style={styles.buttonText}>SEARCH</Text>
         </TouchableHighlight>
