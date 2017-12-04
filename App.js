@@ -21,12 +21,16 @@ gotoRoofstops = () => {
 
 }
 
+homeScreen = () => {
+  this.setState({removeSearch: true, gotoRoofstops:false, weatherComponent: false})
+}
+
   render() {
     return (
 
           <View style={styles.container}>
             <ScrollView>
-              <Header />
+              <Header homeScreen ={this.homeScreen}/>
               {
                 this.state.gotoRoofstops ? <Rooftops /> : null
               }           
