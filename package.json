@@ -23,6 +23,7 @@
     "react": "16.0.0",
     "react-native": "0.50.3",
     "react-native-gesture-handler": "^1.0.0-alpha.35",
+    "react-native-google-analytics-bridge": "^5.4.1",
     "react-native-tab-view": "^0.0.72"
   }
 }

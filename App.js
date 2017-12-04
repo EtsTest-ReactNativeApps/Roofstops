@@ -1,8 +1,9 @@
 import React from 'react';
-import { StyleSheet, Text, View, Scrollview } from 'react-native';
+import { StyleSheet, Text, ScrollView, View } from 'react-native';
 import LandingSearch from './src/components/LandingSearch';
 import Header from './src/components/Header';
-import { ScrollView } from 'react-native';
+// import Analytics from './src/components/Analytics'; Will include this back in when google analytics updates
+
 
 
 export default class App extends React.Component {
@@ -10,6 +11,8 @@ export default class App extends React.Component {
     return (
       
       <View style={styles.container}>
+      {/* <Analytics /> */}
+     
       <ScrollView>
       <Header
         initialRoute={{
