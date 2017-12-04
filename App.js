@@ -1,7 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, ScrollView, View } from 'react-native';
 import LandingSearch from './src/components/LandingSearch';
-import Rooftops from './src/components/Rooftops'
+import Rooftops from './src/components/Rooftops';
+import Weather from './src/components/Weather';
 // import Analytics from './src/components/Analytics'; Will include this back in when google analytics updates
 
 import Navi from './src/components/Navi';
@@ -29,6 +30,7 @@ gotoRoofstops = () => {
               }
 
               <LandingSearch gotoRoofstops = {this.gotoRoofstops}/>
+              <Weather />
             </ScrollView>
           </View>
 
