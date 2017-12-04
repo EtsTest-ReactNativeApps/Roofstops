@@ -99,6 +99,6 @@ const styles = StyleSheet.create({
   buttonText: {
     color: '#2F2D32',
     alignSelf: 'center',
-    fontSize: 28
+    fontSize: 18
   }
 });
