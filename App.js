@@ -13,11 +13,11 @@ export default class App extends React.Component {
   constructor(props){
     super(props)
 
-    this.state = {gotoRoofstops: false, removeSearch: true}
+    this.state = {gotoRoofstops: false, removeSearch: true, weatherComponent: false}
   }
 
 gotoRoofstops = () => {
-  this.setState({gotoRoofstops: true, removeSearch: false})
+  this.setState({gotoRoofstops: true, removeSearch: false , weatherComponent: true})
 
 }
 
@@ -36,7 +36,10 @@ gotoRoofstops = () => {
               {
                 this.state.removeSearch ? <LandingSearch gotoRoofstops = {this.gotoRoofstops}/> :  null
               }
-              <Weather />
+              {
+                this.state.weatherComponent ? 
+                <Weather /> : null
+              }
 
             </ScrollView>
           </View>
