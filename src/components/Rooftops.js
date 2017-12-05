@@ -6,8 +6,8 @@ import Navi from './Navi'
 export default class Rooftops extends React.Component {
 constructor(props){
   super(props)
- console.log(this.props)
- 
+ //console.log(this.props)
+
 }
 
 
@@ -22,7 +22,7 @@ constructor(props){
           }}
           style={styles.container}
         />
-       
+
 
         <Text>List of Rooftops</Text>
           {this.props.data.map(listItems => <Text key={listItems.id}>{listItems.name}: {listItems.address}</Text>)}

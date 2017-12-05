@@ -13,37 +13,37 @@ export default class App extends React.Component {
   constructor(){
     super()
 
-    this.state = {gotoRoofstops: false, removeSearch: true, weatherComponent: false, data:[]}
-    
+    this.state = {Roofstops: false, removeSearch: true, weatherComponent: false, data:[]}
+
   }
   async componentDidMount() {
     const response = await fetch(`https://thawing-anchorage-35743.herokuapp.com/api/locations`)
-    const json = await response.json()   
-    // console.log(json) 
+    const json = await response.json()
+    // console.log(json)
      this.setState({data: json})
-     console.log(this.state.data)
+     //console.log(this.state.data)
   }
 
-  findbyZip = () => {
-    let data = this.state.data
+  findbyZip = (zip) => {
+    let zipData = this.state.data
     let arr = []
-    for (let i = 0; i< data.length; i++){
-      
-      arr.push(data[i].zipcode)
-      
-    }
-    console.log(arr)
+    for (let i = 0; i< zipData.length; i++){
+      if(zipData[i].zipcode === (+zip)){
+        arr.push(zipData[i])
+        this.setState({data: arr})
+          }
+        }
+
   }
 
 gotoRoofstops = () => {
-  this.setState({gotoRoofstops: true, removeSearch: false , weatherComponent: true})
-  this.componentDidMount()
-  this.findbyZip()
+  this.setState({Roofstops: true, removeSearch: false , weatherComponent: true})
+
 }
 
 homeScreen = (e) => {
-  
-  this.setState({removeSearch: true, gotoRoofstops:false, weatherComponent: false})
+
+  this.setState({removeSearch: true, Roofstops:false, weatherComponent: false})
 
 }
 
@@ -55,15 +55,15 @@ homeScreen = (e) => {
             <ScrollView>
               <Header homeScreen ={this.homeScreen}/>
               {
-                this.state.gotoRoofstops ? <Rooftops data = {this.state.data}/> : null
-              }           
+                this.state.Roofstops ? <Rooftops data = {this.state.data}/> : null
+              }
               {
-                this.state.removeSearch ? <LandingSearch gotoRoofstops = {this.gotoRoofstops}/> :  null
+                this.state.removeSearch ? <LandingSearch gotoRoofstops = {this.gotoRoofstops} findbyZip = {this.findbyZip}/> :  null
               }
               {
                 this.state.weatherComponent ? <Weather /> : null
               }
-               
+
 
             </ScrollView>
           </View>

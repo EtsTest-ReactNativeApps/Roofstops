@@ -24,7 +24,9 @@ export default class LandingSearch extends React.Component {
   }
 
   handleSubmit() {
-    this.setState({isLoading: true})
+    let zip = this.state.zipcode
+    this.props.findbyZip(zip)    
+    this.props.gotoRoofstops()
   }
 
   onChanged(text) {
@@ -45,17 +47,14 @@ export default class LandingSearch extends React.Component {
     return (
       <View style={styles.mainContainer}>
         <Text style={styles.text}>Find Your Roof</Text>
-        <TextInput style={styles.textInput} keyboardType='numeric' onChangeText={(text) => this.onChanged(text)} value={this.state.myNumber} maxLength={5} style={styles.input} value={this.state.zipcode} onChange={this
-          .handleSearch
-          .bind(this)}
+        <TextInput keyboardType='numeric' onChange={this.handleSearch.bind(this)} maxLength={5} style={styles.input} value={this.state.zipcode}
         />
         <TouchableHighlight
           style={styles.button}
-          onPress={this.props.gotoRoofstops}
+          onPress={this.handleSubmit.bind(this)}
           underlayColor="white">
           <Text style={styles.buttonText}>SEARCH</Text>
         </TouchableHighlight>
-        <ActivityIndicator animating={this.state.isLoading} color="#111" size='large'/>
       </View>
     )
   }
