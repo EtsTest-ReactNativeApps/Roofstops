@@ -1,9 +1,16 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableHighlight, TouchableOpacity, NavigatorIOS } from 'react-native';
 import Navi from './Navi'
+
 //check path
 
 export default class Rooftops extends React.Component {
+constructor(props){
+  super(props)
+ console.log('Rooftops comp', this.props)
+
+}
+
   render() {
     return (
       <View style={styles.container}>
@@ -14,10 +21,17 @@ export default class Rooftops extends React.Component {
           }}
           style={styles.container}
         />
-       
 
         <Text>List of Rooftops</Text>
-        {/*API info  */}
+          {this.props.data.map(listItems =>
+            <TouchableOpacity  key={listItems.id}>
+            <Text key={listItems.id} onPress={e => this.props.goToSingle(listItems)}>
+              {listItems.name}: {listItems.address}
+            </Text>
+
+          </TouchableOpacity>
+          )}
+
       </View>
     );
   }
