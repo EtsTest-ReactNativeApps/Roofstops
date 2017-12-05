@@ -13,17 +13,40 @@ export default class App extends React.Component {
   constructor(){
     super()
 
-    this.state = {gotoRoofstops: false, removeSearch: true, weatherComponent: false}
+    this.state = {gotoRoofstops: false, removeSearch: true, weatherComponent: false, data:[]}
+    
+  }
+  async componentDidMount() {
+    const response = await fetch(`https://thawing-anchorage-35743.herokuapp.com/api/locations`)
+    const json = await response.json()   
+    // console.log(json) 
+     this.setState({data: json})
+     console.log(this.state.data)
+  }
+
+  findbyZip = () => {
+    let data = this.state.data
+    let arr = []
+    for (let i = 0; i< data.length; i++){
+      
+      arr.push(data[i].zipcode)
+      
+    }
+    console.log(arr)
   }
 
 gotoRoofstops = () => {
   this.setState({gotoRoofstops: true, removeSearch: false , weatherComponent: true})
-
+  this.componentDidMount()
+  this.findbyZip()
 }
 
-homeScreen = () => {
+homeScreen = (e) => {
+  
   this.setState({removeSearch: true, gotoRoofstops:false, weatherComponent: false})
+
 }
+
 
   render() {
     return (
@@ -32,7 +55,7 @@ homeScreen = () => {
             <ScrollView>
               <Header homeScreen ={this.homeScreen}/>
               {
-                this.state.gotoRoofstops ? <Rooftops /> : null
+                this.state.gotoRoofstops ? <Rooftops data = {this.state.data}/> : null
               }           
               {
                 this.state.removeSearch ? <LandingSearch gotoRoofstops = {this.gotoRoofstops}/> :  null
@@ -40,6 +63,7 @@ homeScreen = () => {
               {
                 this.state.weatherComponent ? <Weather /> : null
               }
+               
 
             </ScrollView>
           </View>
