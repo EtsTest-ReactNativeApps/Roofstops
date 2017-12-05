@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, ScrollView, View } from 'react-native';
 import LandingSearch from './src/components/LandingSearch';
 import Rooftops from './src/components/Rooftops';
+import IndividualRooftopInfo from './src/components/IndividualRooftopInfo';
 import Weather from './src/components/Weather';
 // import Analytics from './src/components/Analytics'; Will include this back in when google analytics updates
 
@@ -13,7 +14,7 @@ export default class App extends React.Component {
   constructor(){
     super()
 
-    this.state = {Roofstops: false, removeSearch: true, weatherComponent: false, data:[]}
+    this.state = {Roofstops: false, removeSearch: true, weatherComponent: false, data:[], singleRoofData: [], singleRoof: false}
 
   }
   async componentDidMount() {
@@ -21,7 +22,7 @@ export default class App extends React.Component {
     const json = await response.json()
     // console.log(json)
      this.setState({data: json})
-     //console.log(this.state.data)
+     console.log('api call', this.state.data)
   }
 
   findbyZip = (zip) => {
@@ -44,9 +45,11 @@ gotoRoofstops = () => {
 homeScreen = (e) => {
 
   this.setState({removeSearch: true, Roofstops:false, weatherComponent: false})
-
 }
-
+  singleRooftop = (listItems) => {
+    console.log('here', listItems)
+    this.setState({singleRoof: true, singleRoofData: listItems, removeSearch: false, Roofstops:false, weatherComponent: false })
+  }
 
   render() {
     return (
@@ -55,7 +58,7 @@ homeScreen = (e) => {
             <ScrollView>
               <Header homeScreen ={this.homeScreen}/>
               {
-                this.state.Roofstops ? <Rooftops data = {this.state.data}/> : null
+                this.state.Roofstops ? <Rooftops data = {this.state.data} goToSingle={this.singleRooftop}/> : null
               }
               {
                 this.state.removeSearch ? <LandingSearch gotoRoofstops = {this.gotoRoofstops} findbyZip = {this.findbyZip}/> :  null
@@ -64,6 +67,9 @@ homeScreen = (e) => {
                 this.state.weatherComponent ? <Weather /> : null
               }
 
+              {
+                this.state.singleRoof ? <IndividualRooftopInfo singleRoofData={this.state.singleRoofData} /> : null
+              }
 
             </ScrollView>
           </View>
@@ -76,7 +82,7 @@ homeScreen = (e) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#2F2D32',
+    backgroundColor: '#262B2B',
     alignItems: 'center',
     justifyContent: 'center',
   },
