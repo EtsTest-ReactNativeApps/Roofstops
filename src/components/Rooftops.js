@@ -7,9 +7,12 @@ import Navi from './Navi'
 export default class Rooftops extends React.Component {
 constructor(props){
   super(props)
- console.log('Rooftops comp', this.props)
+ //console.log(this.props)
 
 }
+
+
+
 
   render() {
     return (
@@ -21,6 +24,7 @@ constructor(props){
           }}
           style={styles.container}
         />
+
 
         <Text>List of Rooftops</Text>
           {this.props.data.map(listItems =>

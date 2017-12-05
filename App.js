@@ -14,14 +14,7 @@ export default class App extends React.Component {
   constructor(){
     super()
 
-    this.state = {
-      gotoRoofstops: false,
-      removeSearch: true,
-      weatherComponent: false,
-      data:[],
-      singleRoofData: [],
-      singleRoof: false
-    }
+    this.state = {Roofstops: false, removeSearch: true, weatherComponent: false, data:[], singleRoofData: [], singleRoof: false}
 
   }
   async componentDidMount() {
@@ -32,30 +25,30 @@ export default class App extends React.Component {
      console.log('api call', this.state.data)
   }
 
-  findbyZip = () => {
-    let data = this.state.data
+  findbyZip = (zip) => {
+    let zipData = this.state.data
     let arr = []
-    for (let i = 0; i< data.length; i++){
+    for (let i = 0; i< zipData.length; i++){
+      if(zipData[i].zipcode === (+zip)){
+        arr.push(zipData[i])
+        this.setState({data: arr})
+          }
+        }
 
-      arr.push(data[i].zipcode)
-
-    }
-    console.log(arr)
   }
 
-  gotoRoofstops = () => {
-    this.setState({gotoRoofstops: true, removeSearch: false , weatherComponent: true})
-    this.componentDidMount()
-    this.findbyZip()
-  }
+gotoRoofstops = () => {
+  this.setState({Roofstops: true, removeSearch: false , weatherComponent: true})
 
-  homeScreen = (e) => {
-    this.setState({removeSearch: true, gotoRoofstops:false, weatherComponent: false })
-  }
+}
 
+homeScreen = (e) => {
+
+  this.setState({removeSearch: true, Roofstops:false, weatherComponent: false})
+}
   singleRooftop = (listItems) => {
     console.log('here', listItems)
-    this.setState({singleRoof: true, singleRoofData: listItems, removeSearch: false, gotoRoofstops:false, weatherComponent: false })
+    this.setState({singleRoof: true, singleRoofData: listItems, removeSearch: false, Roofstops:false, weatherComponent: false })
   }
 
   render() {
@@ -65,10 +58,10 @@ export default class App extends React.Component {
             <ScrollView>
               <Header homeScreen ={this.homeScreen}/>
               {
-                this.state.gotoRoofstops ? <Rooftops data = {this.state.data} goToSingle={this.singleRooftop}/> : null
+                this.state.Roofstops ? <Rooftops data = {this.state.data} goToSingle={this.singleRooftop}/> : null
               }
               {
-                this.state.removeSearch ? <LandingSearch gotoRoofstops = {this.gotoRoofstops} /> :  null
+                this.state.removeSearch ? <LandingSearch gotoRoofstops = {this.gotoRoofstops} findbyZip = {this.findbyZip}/> :  null
               }
               {
                 this.state.weatherComponent ? <Weather /> : null
