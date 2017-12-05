@@ -43,6 +43,8 @@ export default class App extends React.Component {
     console.log(arr)
   }
 
+
+// ADD singleRooftop FALSE to the other functions
   gotoRoofstops = () => {
     this.setState({gotoRoofstops: true, removeSearch: false , weatherComponent: true})
     this.componentDidMount()
