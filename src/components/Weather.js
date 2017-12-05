@@ -1,6 +1,7 @@
 import React from 'react';
 import { Styles, View, Text, headerTextStyle, Image } from 'react-native';
 import CurrentWeather from './weatherDetail/CurrentWeather';
+// import CurrentWeatherTwo from './weatherDetail/CurrentWeatherTwo';
 import FiveDayWeather from './weatherDetail/FivedayWeather';
 import ThreeHourWeather from './weatherDetail/ThreeHourWeather';
 
@@ -8,11 +9,14 @@ import ThreeHourWeather from './weatherDetail/ThreeHourWeather';
 export default class Weather extends React.Component {
     render() {
         return (
+    
         <View>
-        <Text style={headerTextStyle}>Weather</Text>
+        <Text style={headerTextStyle}>New Weather</Text>
         <Image
             style={{width: 200, height: 200}}
-          source={{uri: 'http://images.clipartpanda.com/sun-clipart-Transparent-sun-with-shades-clipart-picture-5.png'}} />
+          source={{uri: 'http://icons.iconarchive.com/icons/large-icons/large-weather/512/partly-cloudy-day-icon.png'}} />
+          <CurrentWeather />
+          {/* <CurrentWeatherTwo /> */}
         
         </View>
             
@@ -22,7 +26,11 @@ export default class Weather extends React.Component {
 
 const styles = {
     headerTextStyle: {
-        fontSize: 60, 
-        color: 'red'
+        fontSize: 80, 
+        color: 'red',
+        flex: 1,
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
     }
 };

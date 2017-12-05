@@ -1,26 +1,22 @@
 import React, { Component } from 'react';
 import { ScrollView, View, Text } from 'react-native';
 import Button from './Button';
-import axios from 'axios';
 
 
 
 
-export default class CurrentWeather extends Component {
-constructor(props) {
-    super(props)
-    this.state = {
-        weather: { main: {temp: 9} }
+
+export default class CurrentWeatherTwo extends Component {
+
+    state = {
+        weather: []
     };
-}
-
-    
 
     componentWillMount() {
-        axios
-            .get('https://api.openweathermap.org/data/2.5/weather?zip=80249,us&mode=json&units=imperial&APPID=36e3c356af81e9b65b59a0df8a0b70e1')
-            .then(response => this.setState({weather: response.data}));
-            
+    fetch('https://api.openweathermap.org/data/2.5/weather?zip=80249,us&mode=json&units=imperial&APPID=36e3c356af81e9b65b59a0df8a0b70e1')  
+    .then(function(response) {
+      return response.json()
+    })
     }
 
     renderWeather() {
@@ -32,6 +28,7 @@ constructor(props) {
 
     render() {
         console.log(this.state.weather.main.temp);
+
 
         return (
         <View>
