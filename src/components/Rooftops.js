@@ -1,19 +1,20 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Weather from '/Weather'; //check path
+import Navi from './Navi'
+//check path
 
 export default class Rooftops extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Nav
+        <Navi
           initialRoute={{
-            component: Nav,
+            component: Navi,
             title: 'Roof Stops'
           }}
           style={styles.container}
         />
-        <Weather />
+       
 
         <Text>List of Rooftops</Text>
         {/*API info  */}

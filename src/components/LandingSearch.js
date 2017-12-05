@@ -22,6 +22,10 @@ export default class LandingSearch extends React.Component {
     }
   }
 
+  handleSearch(event) {
+  this.setState({zipcode: event.nativeEvent.text})
+  }
+
   handleSubmit() {
     this.setState({isLoading: true})
   }
@@ -44,15 +48,13 @@ export default class LandingSearch extends React.Component {
     return (
       <View style={styles.mainContainer}>
         <Text style={styles.text}>Find Your Roof</Text>
-        <TextInput style={styles.input}
-          keyboardType='numeric'
-          onChangeText={(text) => this.onChanged(text)} value={this.state.myNumber}
-          maxLength={10}
-          // onChange={this.handleSearch.bind(this)}
+        <TextInput style={styles.textInput} keyboardType='numeric' onChangeText={(text) => this.onChanged(text)} value={this.state.myNumber} maxLength={5} style={styles.input} value={this.state.zipcode} onChange={this
+          .handleSearch
+          .bind(this)}
         />
         <TouchableHighlight
           style={styles.button}
-          onPress={this.handleSubmit.bind(this)}
+          onPress={this.props.gotoRoofstops}
           underlayColor="white">
           <Text style={styles.buttonText}>SEARCH</Text>
         </TouchableHighlight>
@@ -70,7 +72,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column'
   },
   text: {
-    color: '#A7A09E',
+    color: '#F3FFF8',
     fontSize: 20,
     textAlign: 'center',
     paddingBottom: 10,
@@ -79,16 +81,16 @@ const styles = StyleSheet.create({
   },
   input: {
     borderWidth: 2,
-    borderColor: '#A7A09E',
+    borderColor: '#F3FFF8',
     borderRadius: 7,
     height: 60,
     width: 150,
-    color: '#A7A09E',
+    color: '#F3FFF8',
     fontSize: 36,
     textAlign: 'center'
   },
   button: {
-    backgroundColor: '#A7A09E',
+    backgroundColor: '#046C87',
     height: 45,
     width: 100,
     marginTop: 10,
@@ -97,7 +99,7 @@ const styles = StyleSheet.create({
     marginBottom: 10
   },
   buttonText: {
-    color: '#2F2D32',
+    color: '#F3FFF8',
     alignSelf: 'center',
     fontSize: 18
   }
