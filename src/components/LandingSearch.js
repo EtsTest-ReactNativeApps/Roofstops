@@ -8,6 +8,9 @@ import {
   ActivityIndicator,
   Button
 } from 'react-native';
+// import {Hoshi} from 'react-native-textinput-effects'
+
+
 
 export default class LandingSearch extends React.Component {
   constructor(props) {
@@ -20,7 +23,7 @@ export default class LandingSearch extends React.Component {
   }
 
   handleSearch(event) {
-    this.setState({zipcode: event.nativeEvent.text})
+  this.setState({zipcode: event.nativeEvent.text})
   }
 
   handleSubmit() {
@@ -69,24 +72,25 @@ const styles = StyleSheet.create({
     flexDirection: 'column'
   },
   text: {
-    color: '#A7A09E',
+    color: '#F3FFF8',
     fontSize: 20,
     textAlign: 'center',
     paddingBottom: 10,
+    paddingTop: 50,
     justifyContent: 'center'
   },
   input: {
     borderWidth: 2,
-    borderColor: '#A7A09E',
+    borderColor: '#F3FFF8',
     borderRadius: 7,
     height: 60,
     width: 150,
-    color: '#A7A09E',
+    color: '#F3FFF8',
     fontSize: 36,
     textAlign: 'center'
   },
   button: {
-    backgroundColor: '#A7A09E',
+    backgroundColor: '#046C87',
     height: 45,
     width: 100,
     marginTop: 10,
@@ -95,7 +99,7 @@ const styles = StyleSheet.create({
     marginBottom: 10
   },
   buttonText: {
-    color: '#2F2D32',
+    color: '#F3FFF8',
     alignSelf: 'center',
     fontSize: 18
   }
