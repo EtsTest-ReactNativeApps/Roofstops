@@ -8,6 +8,9 @@ import {
   ActivityIndicator,
   Button
 } from 'react-native';
+// import {Hoshi} from 'react-native-textinput-effects'
+
+
 
 export default class LandingSearch extends React.Component {
   constructor(props) {
@@ -19,14 +22,10 @@ export default class LandingSearch extends React.Component {
     }
   }
 
-  handleSearch(event) {
-    this.setState({zipcode: event.nativeEvent.text})
-  }
-
   handleSubmit() {
     this.setState({isLoading: true})
   }
-  
+
   onChanged(text) {
     let newText = '';
     let numbers = '0123456789';
@@ -45,15 +44,15 @@ export default class LandingSearch extends React.Component {
     return (
       <View style={styles.mainContainer}>
         <Text style={styles.text}>Find Your Roof</Text>
-        <TextInput style={styles.textInput} keyboardType='numeric' onChangeText={(text) => this.onChanged(text)} value={this.state.myNumber} maxLength={10} style={styles.input} value={this.state.zipcode} onChange={this
-          .handleSearch
-          .bind(this)} 
+        <TextInput style={styles.input}
+          keyboardType='numeric'
+          onChangeText={(text) => this.onChanged(text)} value={this.state.myNumber}
+          maxLength={10}
+          // onChange={this.handleSearch.bind(this)}
         />
         <TouchableHighlight
           style={styles.button}
-          onPress={this
-          .handleSubmit
-          .bind(this)}
+          onPress={this.handleSubmit.bind(this)}
           underlayColor="white">
           <Text style={styles.buttonText}>SEARCH</Text>
         </TouchableHighlight>
@@ -75,6 +74,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: 'center',
     paddingBottom: 10,
+    paddingTop: 50,
     justifyContent: 'center'
   },
   input: {
