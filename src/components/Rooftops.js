@@ -7,7 +7,6 @@ import Navi from './Navi'
 export default class Rooftops extends React.Component {
 constructor(props){
   super(props)
- //console.log(this.props)
 }
 
   render() {
