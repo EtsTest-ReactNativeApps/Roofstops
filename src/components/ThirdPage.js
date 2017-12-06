@@ -14,7 +14,6 @@ export default class ThirdPage extends React.Component {
 
 
   render(){
-    console.log('This One', this.props);
     return (
 
       <ScrollView>
