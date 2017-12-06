@@ -8,8 +8,7 @@ import ThreeHourWeather from './weatherDetail/ThreeHourWeather';
 
 export default class Weather extends React.Component {
     render() {
-        return (
-    
+        return (  
         <View style={styles.centerThings}>
         <Text style={styles.headerTextStyle}>Current Weather</Text>
           <CurrentWeather />
