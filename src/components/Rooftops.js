@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
   listItemName: {
     fontSize: 20,
     textAlign: 'center',
-    color: '#262B2B'
+    color: '#F4F7F4'
   },
   address: {
     textAlign: 'center',

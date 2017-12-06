@@ -1,13 +1,9 @@
 import React from 'react';
 import { StyleSheet, Text, ScrollView, View } from 'react-native';
 import LandingSearch from './src/components/LandingSearch';
-import Rooftops from './src/components/Rooftops';
-import IndividualRooftopInfo from './src/components/IndividualRooftopInfo';
-import Weather from './src/components/Weather';
-// import Analytics from './src/components/Analytics'; Will include this back in when google analytics updates
-
-import Navi from './src/components/Navi';
+import SecondPage from './src/components/SecondPage';
 import Header from './src/components/Header';
+
 
 
 export default class App extends React.Component {
@@ -15,68 +11,51 @@ export default class App extends React.Component {
     super()
 
     this.state = {
-      Roofstops: false,
       removeSearch: true,
-      weatherComponent: false,
       data:[],
-      singleRoofData: [],
-      singleRoof: false,
-      toggleStyle: false
+      activeSecond: false,
+      // toggleStyle: false
     }
 
   }
+
+  //Gets all data from API and sets state to Result
   async componentDidMount() {
     const response = await fetch(`https://thawing-anchorage-35743.herokuapp.com/api/locations`)
     const json = await response.json()
-    // console.log(json)
      this.setState({data: json})
-     console.log('api call', this.state.data)
   }
 
+  //Filters returned rooftops by zipcode
   findbyZip = (zip) => {
     let zipData = this.state.data
     let arr = []
     for (let i = 0; i< zipData.length; i++){
       if(zipData[i].zipcode === (+zip)){
         arr.push(zipData[i])
+
         this.setState({data: arr})
           }
+      else if(zipData[i].zipcode !== (+zip)){
+        this.setState({data: arr})
+      }
         }
 
+
   }
 
+  //Removes Search bar and goes to second page
   gotoRoofstops = () => {
-    this.setState({
-      Roofstops: true,
-      removeSearch: false ,
-      weatherComponent: true,
-      singleRoof: false,
-      toggleStyle: true
-    })
-
+    this.setState({activeSecond: true, removeSearch: false})
   }
 
+  //Send Logo to Home Screen
   homeScreen = (e) => {
-    this.setState({
-      removeSearch: true,
-      Roofstops:false,
-      weatherComponent: false,
-      singleRoof: false,
-      toggleStyle: false,
-    })
+    this.setState({removeSearch: true, activeSecond:false})
+    this.componentDidMount()
   }
 
-  singleRooftop = (listItems) => {
-    // console.log('here', listItems)
-    this.setState({
-      singleRoof: true,
-      singleRoofData: listItems,
-      removeSearch: false,
-      Roofstops:false,
-      weatherComponent: false,
-      toggleStyle: true,
-    })
-  }
+
 
   render() {
     return (
@@ -85,17 +64,11 @@ export default class App extends React.Component {
             <ScrollView>
               <Header homeScreen ={this.homeScreen}/>
               {
-                this.state.Roofstops ? <Rooftops data = {this.state.data} goToSingle={this.singleRooftop}/> : null
-              }
-              {
                 this.state.removeSearch ? <LandingSearch gotoRoofstops = {this.gotoRoofstops} findbyZip = {this.findbyZip}/> :  null
-              }
-              {
-                this.state.weatherComponent ? <Weather /> : null
               }
 
               {
-                this.state.singleRoof ? <IndividualRooftopInfo singleRoofData={this.state.singleRoofData} /> : null
+                this.state.activeSecond ? <SecondPage data={this.state.data}/> : null
               }
 
             </ScrollView>

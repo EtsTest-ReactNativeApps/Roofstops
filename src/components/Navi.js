@@ -14,8 +14,8 @@ export default class Navi extends PureComponent {
   state = {
     index: 0,
     routes: [
-      { key: 'first', title: 'Search' },
-      { key: 'second', title: 'List View' },
+      { key: 'first', title: 'List View' },
+      { key: 'second', title: 'Map View' },
     ],
   };
 
