@@ -12,8 +12,8 @@ render() {
 
         <View style={styles.container}>
           <TouchableOpacity onPress={this.props.homeScreen}>
-          <Image
-            style ={{marginTop:20, marginBottom:10}}source={require("../../images/roofstops-logo-2.png")}/>
+            <Image
+              style ={{marginTop:50, marginBottom:10}}source={require("../../images/roofstops-logo-2.png")}/>
           </TouchableOpacity>
         </View>
 
@@ -25,7 +25,7 @@ render() {
 const styles = StyleSheet.create({
 container: {
   flex: 1,
-  backgroundColor: '#2F2D32',
+  backgroundColor: '#262B2B',
   alignItems: 'center',
   justifyContent: 'center',
 },
