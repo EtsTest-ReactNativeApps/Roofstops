@@ -12,8 +12,8 @@ render() {
 
         <View style={styles.container}>
           <TouchableOpacity onPress={this.props.homeScreen}>
-          <Image
-            style ={{marginTop:20, marginBottom:10}}source={require("../../images/roofstops-logo-2.png")}/>
+            <Image
+              style ={{marginTop:50, marginBottom:10}}source={require("../../images/roofstops-logo-2.png")}/>
           </TouchableOpacity>
         </View>
 
