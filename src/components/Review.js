@@ -4,13 +4,16 @@ import { FormLabel, FormInput } from 'react-native-elements'
 
 
 
+
 export default class Review extends React.Component{
     render(){
         return(
-                <ScrollView>
+            
+                     <ScrollView>
+                     
                     <FormLabel>Bar Review</FormLabel>
                     <FormInput/>
-                </ScrollView>
+                    </ScrollView>
         )
     }
 
