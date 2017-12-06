@@ -67,6 +67,7 @@ const styles = StyleSheet.create({
     color: '#F4F7F4',
     paddingBottom: 5,
     paddingTop: 5,
+    textDecorationLine: 'underline'
   },
   website: {
     color: '#F4F7F4',
