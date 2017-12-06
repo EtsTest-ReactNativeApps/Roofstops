@@ -5,6 +5,7 @@ import SecondPage from './src/components/SecondPage';
 import Header from './src/components/Header';
 
 
+
 export default class App extends React.Component {
   constructor(){
     super()
@@ -35,6 +36,7 @@ export default class App extends React.Component {
           }
         }
 
+
   }
 
   //Removes Search bar and goes to second page
@@ -45,6 +47,7 @@ export default class App extends React.Component {
   //Send Logo to Home Screen
   homeScreen = (e) => {
     this.setState({removeSearch: true, activeSecond:false})
+    this.componentDidMount()
   }
 
 
