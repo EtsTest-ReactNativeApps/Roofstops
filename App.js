@@ -5,6 +5,7 @@ import SecondPage from './src/components/SecondPage';
 import Header from './src/components/Header';
 
 
+
 export default class App extends React.Component {
   constructor(){
     super()
@@ -12,7 +13,8 @@ export default class App extends React.Component {
     this.state = {
       removeSearch: true,
       data:[],
-      activeSecond: false
+      activeSecond: false,
+      // toggleStyle: false
     }
 
   }
@@ -31,9 +33,14 @@ export default class App extends React.Component {
     for (let i = 0; i< zipData.length; i++){
       if(zipData[i].zipcode === (+zip)){
         arr.push(zipData[i])
+
         this.setState({data: arr})
           }
+      else if(zipData[i].zipcode !== (+zip)){
+        this.setState({data: arr})
+      }
         }
+
 
   }
 
@@ -45,12 +52,13 @@ export default class App extends React.Component {
   //Send Logo to Home Screen
   homeScreen = (e) => {
     this.setState({removeSearch: true, activeSecond:false})
+    this.componentDidMount()
   }
 
   render() {
     return (
 
-          <View style={styles.container}>
+          <View style={[styles.container, this.state.toggleStyle && styles.containerTwo]}>
             <ScrollView>
               <Header homeScreen ={this.homeScreen}/>
               {
@@ -76,4 +84,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  containerTwo: {
+    backgroundColor: '#F4F7F4',
+  }
 });

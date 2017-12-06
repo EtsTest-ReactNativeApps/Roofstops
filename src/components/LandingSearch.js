@@ -26,10 +26,13 @@ export default class LandingSearch extends React.Component {
   this.setState({zipcode: event.nativeEvent.text})
   }
 
-  handleSubmit() {
+  handleSubmit = () => {
     let zip = this.state.zipcode
-    this.props.findbyZip(zip)
-    this.props.gotoRoofstops()
+    if(zip){
+      this.props.findbyZip(zip)
+      this.props.gotoRoofstops()
+    }
+
   }
 
   render() {
@@ -37,10 +40,10 @@ export default class LandingSearch extends React.Component {
       <View>
         <Text style={styles.text}>Find Your Roof</Text>
         <View style={styles.mainContainer}>
-        <Sae style={styles.width} label ={'Zipcode'} iconClass={FontAwesomeIcon} iconName={'pencil'} iconColor={'#262B2B'} autoCapitalize={'none'} autoCorrect={false} keyboardType="numeric" onChange={this.handleSearch.bind(this)} maxLength={5} value={this.state.zipcode} />
-        <TouchableHighlight
-          style={styles.button}
-          onPress={this.handleSubmit.bind(this)}
+          <Sae style={styles.width} label={'zipcode'} iconClass={FontAwesomeIcon} iconName={'pencil'} iconColor={'#262B2B'} autoCapitalize={'none'} autoCorrect={false} keyboardType="numeric" onChange={this.handleSearch.bind(this)} maxLength={5} value={this.state.zipcode} />
+          <TouchableHighlight
+            style={styles.button}
+            onPress={this.handleSubmit.bind(this)}
           underlayColor="white">
           <Text style={styles.buttonText}>SEARCH</Text>
         </TouchableHighlight>
@@ -72,6 +75,7 @@ const styles = StyleSheet.create({
     height: 60,
     width: 150,
     color: '#F3FFF8',
+    // color: '#1B998B',
     fontSize: 36,
     textAlign: 'center'
   },
@@ -93,6 +97,6 @@ const styles = StyleSheet.create({
   width:{
     width: 100,
     marginLeft: 38,
-    marginBottom:10
+    marginBottom:10,
   }
 });
