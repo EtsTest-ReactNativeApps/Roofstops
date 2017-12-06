@@ -8,7 +8,9 @@ import {
   ActivityIndicator,
   Button
 } from 'react-native';
-// import {Hoshi} from 'react-native-textinput-effects'
+import {Sae} from 'react-native-textinput-effects'
+import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome'
+
 
 
 
@@ -48,16 +50,17 @@ export default class LandingSearch extends React.Component {
 
   render() {
     return (
-      <View style={styles.mainContainer}>
+      <View>
         <Text style={styles.text}>Find Your Roof</Text>
-        <TextInput keyboardType='numeric' onChange={this.handleSearch.bind(this)} maxLength={5} style={styles.input} value={this.state.zipcode}
-        />
+        <View style={styles.mainContainer}>
+        <Sae style={styles.width} label ={'Zipcode'} iconClass={FontAwesomeIcon} iconName={'pencil'} iconColor={'#262B2B'} autoCapitalize={'none'} autoCorrect={false} keyboardType="numeric" onChange={this.handleSearch.bind(this)} maxLength={5} value={this.state.zipcode} />
         <TouchableHighlight
           style={styles.button}
           onPress={this.handleSubmit.bind(this)}
           underlayColor="white">
           <Text style={styles.buttonText}>SEARCH</Text>
         </TouchableHighlight>
+        </View>
       </View>
     )
   }
@@ -68,7 +71,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    flexDirection: 'column'
+    
   },
   text: {
     color: '#F3FFF8',
@@ -93,6 +96,7 @@ const styles = StyleSheet.create({
     height: 45,
     width: 100,
     marginTop: 10,
+    marginLeft: 5,
     borderRadius: 4,
     justifyContent: 'center',
     marginBottom: 10
@@ -101,5 +105,10 @@ const styles = StyleSheet.create({
     color: '#F3FFF8',
     alignSelf: 'center',
     fontSize: 18
+  },
+  width:{
+    width: 100,
+    marginLeft: 38,
+    marginBottom:10
   }
 });
