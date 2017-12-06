@@ -15,7 +15,6 @@ export default class App extends React.Component {
       data:[],
       activeSecond: false,
       zip: ''
-      // toggleStyle: false
     }
 
   }
@@ -31,8 +30,8 @@ export default class App extends React.Component {
   findbyZip = (zip) => {
     let zipData = this.state.data
     let zipArr = this.state.zip
-    zipArr = zip    
-    this.setState({zip: zipArr})   
+    zipArr = zip
+    this.setState({zip: zipArr})
     let arr = []
     for (let i = 0; i< zipData.length; i++){
       if(zipData[i].zipcode === (+zip)){
@@ -51,7 +50,7 @@ export default class App extends React.Component {
   //Removes Search bar and goes to second page
   gotoRoofstops = () => {
     this.setState({activeSecond: true, removeSearch: false})
-    
+
   }
 
   //Send Logo to Home Screen

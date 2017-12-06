@@ -5,7 +5,6 @@ import Review from './Review'
 import {Button} from 'react-native-elements'
 
 
-
 export default class ThirdPage extends React.Component {
   constructor(props){
     super(props)
@@ -21,7 +20,8 @@ export default class ThirdPage extends React.Component {
         </ScrollView>
 
         <ScrollView contentContainerStyle={styles.contentContainer}>
-          <TouchableHighlight style={styles.backButton} onPress={this.props.returnToPrevious}>
+          <TouchableHighlight style={styles.backButton}
+            onPress={this.props.returnToPrevious}>
             <Text style={styles.buttonText}>Back To List</Text>
           </TouchableHighlight>
         </ScrollView>

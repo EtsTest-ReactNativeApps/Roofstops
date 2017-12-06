@@ -42,7 +42,8 @@ const styles = StyleSheet.create({
   listItemName: {
     fontSize: 20,
     textAlign: 'center',
-    color: '#F4F7F4'
+    color: '#F4F7F4',
+    fontFamily: 'Avenir-Heavy',
   },
   address: {
     textAlign: 'center',

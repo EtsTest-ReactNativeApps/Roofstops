@@ -16,18 +16,18 @@ export default class IndividualRooftopInfo extends React.Component {
               />
 
               <Text style={styles.name}>{this.props.data.name}</Text>
-              <Text style={styles.details}>{this.props.data.address}  {this.props.data.city}, {this.props.data.zipcode}</Text>
+              <Text style={styles.address}>{this.props.data.address}  {this.props.data.city}, {this.props.data.zipcode}</Text>
               <Text style={styles.details}></Text>
-              <Text style={styles.details}>Regular Hours</Text>
+              <Text style={styles.hours}>Regular Hours</Text>
               <Text style={styles.details}>{this.props.data.regular}</Text>
-              <Text style={styles.details}>Happy Hour</Text>
+              <Text style={styles.hours}>Happy Hour</Text>
               <Text style={styles.details}>{this.props.data.happy}</Text>
               <Text style={styles.phone}>{this.props.data.phone}</Text>
 
             <TouchableHighlight style={styles.button} underlayColor="white">
               <Text style={styles.website}
-                onPress   ={() => Linking.openURL(this.props.data.website)}>
-                Visit their Website
+                onPress={() => Linking.openURL(this.props.data.website)}>
+                Visit the Website
               </Text>
             </TouchableHighlight>
           </ScrollView>
@@ -45,14 +45,28 @@ const styles = StyleSheet.create({
   },
   name: {
     fontSize: 24,
+    fontFamily: 'Avenir-Heavy',
     textAlign: 'center',
-    color: '#F4F7F4'
+    color: '#F4F7F4',
+    paddingBottom: 5,
+    paddingTop: 5,
+  },
+  hours: {
+    fontWeight: 'bold',
+    fontSize: 18,
+    textAlign: 'center',
+    color: '#F4F7F4',
   },
   details: {
     fontSize: 18,
     textAlign: 'center',
     color: '#F4F7F4',
-    paddingBottom: 5,
+    paddingBottom: 10,
+  },
+  address: {
+    fontSize: 18,
+    textAlign: 'center',
+    color: '#F4F7F4',
   },
   phone: {
     fontSize: 18,

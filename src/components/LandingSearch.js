@@ -38,9 +38,12 @@ export default class LandingSearch extends React.Component {
   render() {
     return (
       <View>
-        <Text style={styles.text}>Find Your Roof</Text>
+        <Text style={styles.tagline}>Rooftops Worth The Stop</Text>
+        {/* <Text style={styles.text}>Enter Your Zipcode</Text> */}
         <View style={styles.mainContainer}>
-          <Sae style={styles.width} label={'zipcode'} iconClass={FontAwesomeIcon} iconName={'pencil'} iconColor={'#262B2B'} autoCapitalize={'none'} autoCorrect={false} keyboardType="numeric" onChange={this.handleSearch.bind(this)} maxLength={5} value={this.state.zipcode} />
+          <Sae style={styles.width}
+            label={'zipcode'}
+            iconClass={FontAwesomeIcon} iconName={'map-marker'} iconColor={'#6F65AE'} autoCapitalize={'none'} autoCorrect={false} keyboardType="numeric" onChange={this.handleSearch.bind(this)} maxLength={5} value={this.state.zipcode} />
           <TouchableHighlight
             style={styles.button}
             onPress={this.handleSubmit.bind(this)}
@@ -58,14 +61,21 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-
+  },
+  tagline: {
+    color: '#F3FFF8',
+    fontSize: 20,
+    textAlign: 'center',
+    paddingBottom: 10,
+    paddingTop: 50,
+    justifyContent: 'center'
   },
   text: {
     color: '#F3FFF8',
     fontSize: 20,
     textAlign: 'center',
     paddingBottom: 10,
-    paddingTop: 50,
+    // paddingTop: 50,
     justifyContent: 'center'
   },
   input: {
@@ -96,7 +106,8 @@ const styles = StyleSheet.create({
   },
   width:{
     width: 100,
-    marginLeft: 38,
+    marginLeft: 20,
     marginBottom:10,
+    marginRight: 15,
   }
 });
