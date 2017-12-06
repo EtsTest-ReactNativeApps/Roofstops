@@ -18,9 +18,7 @@ export default class LandingSearch extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      zipcode: '',
-      isLoading: false,
-      error: false
+      zipcode: ''
     }
   }
 
@@ -30,22 +28,8 @@ export default class LandingSearch extends React.Component {
 
   handleSubmit() {
     let zip = this.state.zipcode
-    this.props.findbyZip(zip)    
+    this.props.findbyZip(zip)
     this.props.gotoRoofstops()
-  }
-
-  onChanged(text) {
-    let newText = '';
-    let numbers = '0123456789';
-
-    for (var i = 0; i < text.length; i++) {
-      if (numbers.indexOf(text[i]) > -1) {
-        newText = newText + text[i];
-      } else {
-        alert("Enter Zip Code");
-      }
-    }
-    this.setState({myNumber: newText});
   }
 
   render() {
@@ -71,7 +55,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    
+
   },
   text: {
     color: '#F3FFF8',
