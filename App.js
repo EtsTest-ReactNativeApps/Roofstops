@@ -32,8 +32,12 @@ export default class App extends React.Component {
     for (let i = 0; i< zipData.length; i++){
       if(zipData[i].zipcode === (+zip)){
         arr.push(zipData[i])
+
         this.setState({data: arr})
           }
+      else if(zipData[i].zipcode !== (+zip)){
+        this.setState({data: arr})
+      }
         }
 
 
