@@ -10,8 +10,8 @@ export default class CurrentWeather extends Component {
             weather: {
             
                 main: {
-                    temp: 'Loading...',
-                    decimal: 10
+                    temp: 'Updating...',
+                    description: 'Desc'
                 }
             }
         };
@@ -29,15 +29,15 @@ export default class CurrentWeather extends Component {
             .map(weather => <Weather key={state.weather.main.temp} weather={temp}
             />);
     }
-    renderWeatherPressure() {
+    renderWeatherDescription() {
         return this
             .state
             .weather
-            .map(weather => <Weather key={state.weather.icon} weather={icon}
+            .map(weather => <Weather key={state.weather.weather.description} weather={icon}
             />);
     }
     render() {
-        // console.log(this.state.weather)
+        console.log(this.state.weather)
         return (
             <View>
                 <Text style={styles.weatherDetail}>Current Temperature: {(+this.state.weather.main.temp).toFixed()} &#8457;</Text>
