@@ -13,7 +13,8 @@ export default class SecondPage extends React.Component{
         Roofstops: true,
         singleRoof: false,
         singleRoofData: [],
-        thirdPage:false
+        thirdPage:false,
+        data: this.props.data
       }
     }
 
@@ -30,6 +31,7 @@ export default class SecondPage extends React.Component{
 
 
     render(){
+      console.log(this.state.data)
       return (
         <View>
           <ScrollView>
