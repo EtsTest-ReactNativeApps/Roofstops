@@ -10,7 +10,7 @@ export default class ThirdPage extends React.Component {
 
   render(){
     return (
-      <IndividualRooftopInfo />
+      <IndividualRooftopInfo data={this.props.singleRoofData}/>
     )
   }
 }
