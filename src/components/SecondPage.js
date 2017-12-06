@@ -13,7 +13,8 @@ export default class SecondPage extends React.Component{
         Roofstops: true,
         singleRoof: false,
         singleRoofData: [],
-        thirdPage:false
+        thirdPage:false,
+        data: this.props.data
       }
     }
     //Sets singleRoofData to individual items and removes full list and weatherComponent
@@ -25,6 +26,13 @@ export default class SecondPage extends React.Component{
         Roofstops:false,
         weatherComponent: false
          })
+    }
+    returnToPrevious = () => {
+      this.setState({
+        thirdPage:false,
+        Roofstops: true,
+        weatherComponent:true
+      })
     }
 
 
@@ -43,7 +51,7 @@ export default class SecondPage extends React.Component{
             }
 
             {
-              this.state.thirdPage ? <ThirdPage singleRoofData ={this.state.singleRoofData}/> : null
+              this.state.thirdPage ? <ThirdPage singleRoofData ={this.state.singleRoofData} data ={this.state.data} returnToPrevious ={this.returnToPrevious}/> : null
             }
           </ScrollView>
         </View>

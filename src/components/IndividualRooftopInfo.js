@@ -11,7 +11,6 @@ export default class IndividualRooftopInfo extends React.Component {
     return(
       <View>
           <ScrollView>
-            <Text>HEY THIS A ROOFTOP</Text>
             <Text>
               <Image
                   style={{width: 200, height: 200}}

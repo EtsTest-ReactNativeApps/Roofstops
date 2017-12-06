@@ -1,6 +1,9 @@
 import React from 'react'
 import IndividualRooftopInfo from './IndividualRooftopInfo'
-import { StyleSheet, Text, ScrollView, View } from 'react-native';
+import {ScrollView, ListView,} from 'react-native'
+import Review from './Review'
+import {Button} from 'react-native-elements'
+
 
 
 export default class ThirdPage extends React.Component {
@@ -8,12 +11,17 @@ export default class ThirdPage extends React.Component {
     super(props)
   }
 
+
+
   render(){
     console.log('This One', this.props);
     return (
-    <View>
+
+      <ScrollView>
+      <Button small title='Back' backgroundColor ={'#397af8'} onPress={this.props.returnToPrevious} />
       <IndividualRooftopInfo data={this.props.singleRoofData}/>
-    </View>
+      <Review />
+      </ScrollView>
     )
   }
 }
