@@ -13,7 +13,8 @@ export default class App extends React.Component {
     this.state = {
       removeSearch: true,
       data:[],
-      activeSecond: false
+      activeSecond: false,
+      // toggleStyle: false
     }
 
   }
@@ -59,7 +60,7 @@ export default class App extends React.Component {
   render() {
     return (
 
-          <View style={styles.container}>
+          <View style={[styles.container, this.state.toggleStyle && styles.containerTwo]}>
             <ScrollView>
               <Header homeScreen ={this.homeScreen}/>
               {
@@ -85,4 +86,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  containerTwo: {
+    backgroundColor: '#F4F7F4',
+  }
 });

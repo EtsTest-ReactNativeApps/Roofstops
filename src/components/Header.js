@@ -20,6 +20,10 @@ container: {
   alignItems: 'center',
   justifyContent: 'center',
 },
+imageStyle: {
+  marginTop: 40,
+  marginBottom: 10
+}
 });
 
 export default Header
