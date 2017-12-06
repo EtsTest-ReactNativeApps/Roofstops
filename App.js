@@ -15,12 +15,13 @@ export default class App extends React.Component {
     super()
 
     this.state = {
-      gotoRoofstops: false,
+      Roofstops: false,
       removeSearch: true,
       weatherComponent: false,
       data:[],
       singleRoofData: [],
-      singleRoof: false
+      singleRoof: false,
+      toggleStyle: false
     }
 
   }
@@ -32,45 +33,62 @@ export default class App extends React.Component {
      console.log('api call', this.state.data)
   }
 
-  findbyZip = () => {
-    let data = this.state.data
+  findbyZip = (zip) => {
+    let zipData = this.state.data
     let arr = []
-    for (let i = 0; i< data.length; i++){
+    for (let i = 0; i< zipData.length; i++){
+      if(zipData[i].zipcode === (+zip)){
+        arr.push(zipData[i])
+        this.setState({data: arr})
+          }
+        }
 
-      arr.push(data[i].zipcode)
-
-    }
-    console.log(arr)
   }
 
-
-// ADD singleRooftop FALSE to the other functions
   gotoRoofstops = () => {
-    this.setState({gotoRoofstops: true, removeSearch: false , weatherComponent: true})
-    this.componentDidMount()
-    this.findbyZip()
+    this.setState({
+      Roofstops: true,
+      removeSearch: false ,
+      weatherComponent: true,
+      singleRoof: false,
+      toggleStyle: true
+    })
+
   }
 
   homeScreen = (e) => {
-    this.setState({removeSearch: true, gotoRoofstops:false, weatherComponent: false })
+    this.setState({
+      removeSearch: true,
+      Roofstops:false,
+      weatherComponent: false,
+      singleRoof: false,
+      toggleStyle: false,
+    })
   }
 
   singleRooftop = (listItems) => {
-    console.log('here', listItems)
-    this.setState({singleRoof: true, singleRoofData: listItems, removeSearch: false, gotoRoofstops:false, weatherComponent: false })
+    // console.log('here', listItems)
+    this.setState({
+      singleRoof: true,
+      singleRoofData: listItems,
+      removeSearch: false,
+      Roofstops:false,
+      weatherComponent: false,
+      toggleStyle: true,
+    })
   }
 
   render() {
     return (
 
-          <View style={styles.container}>
+          <View style={[styles.container, this.state.toggleStyle && styles.containerTwo]}>
             <ScrollView>
               <Header homeScreen ={this.homeScreen}/>
               {
-                this.state.gotoRoofstops ? <Rooftops data = {this.state.data} goToSingle={this.singleRooftop}/> : null
+                this.state.Roofstops ? <Rooftops data = {this.state.data} goToSingle={this.singleRooftop}/> : null
               }
               {
-                this.state.removeSearch ? <LandingSearch gotoRoofstops = {this.gotoRoofstops} /> :  null
+                this.state.removeSearch ? <LandingSearch gotoRoofstops = {this.gotoRoofstops} findbyZip = {this.findbyZip}/> :  null
               }
               {
                 this.state.weatherComponent ? <Weather /> : null
@@ -95,4 +113,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  containerTwo: {
+    backgroundColor: '#F4F7F4',
+  }
 });
