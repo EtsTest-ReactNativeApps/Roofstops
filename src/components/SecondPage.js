@@ -47,14 +47,13 @@ export default class SecondPage extends React.Component{
             }
 
             {
-              this.state.thirdPage ? <ThirdPage singleRoofData ={this.state.singleRoofData} data ={this.state.data} returnToPrevious ={this.returnToPrevious}/> : null
+             this.state.thirdPage ? <ThirdPage singleRoofData ={this.state.singleRoofData} data ={this.state.data} returnToPrevious ={this.returnToPrevious}/> : null
             }
           </ScrollView>
 
           <ScrollView>
-
             {
-              this.state.weatherComponent ? <Weather /> : null
+              this.state.weatherComponent ? <Weather zip={this.props.zip}/> : null
             }
           </ScrollView>
 

@@ -37,8 +37,7 @@ const styles = StyleSheet.create({
   roofstopsTitle: {
     fontSize: 24,
     marginBottom: 10,
-    color: '#046C87',
-    // color: '#ED9B40',
+    color: '#F4F7F4',
   },
   listItemName: {
     fontSize: 20,
@@ -48,7 +47,6 @@ const styles = StyleSheet.create({
   address: {
     textAlign: 'center',
     marginBottom: 10,
-    // color: '#115933',
     color: '#1B998B',
   }
 });

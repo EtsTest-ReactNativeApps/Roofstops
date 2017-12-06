@@ -11,7 +11,7 @@ export default class Weather extends React.Component {
         return (
         <View style={styles.centerThings}>
         {/* <Text style={styles.headerTextStyle}>Current Weather</Text> */}
-          <CurrentWeather />
+           <CurrentWeather zip={this.props.zip}/>
         </View>
 
         )

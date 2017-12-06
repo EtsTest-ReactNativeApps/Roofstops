@@ -10,15 +10,15 @@ export default class CurrentWeather extends Component {
             weather: {
 
                 main: {
-                    temp: 'Loading...',
-                    decimal: 10
+                    temp: 'Updating...',
+                    description: 'Desc'
                 }
             }
         };
     }
     componentWillMount() {
         axios
-            .get('https://api.openweathermap.org/data/2.5/weather?zip=80202,us&mode=json&units=imperial&APPID=36e3c356af81e9b65b59a0df8a0b70e1')
+            .get(`https://api.openweathermap.org/data/2.5/weather?zip=${this.props.zip},us&mode=json&units=imperial&APPID=36e3c356af81e9b65b59a0df8a0b70e1`)
             .then(response => this.setState({weather: response.data}));
     }
 
@@ -29,24 +29,26 @@ export default class CurrentWeather extends Component {
             .map(weather => <Weather key={state.weather.main.temp} weather={temp}
             />);
     }
-    renderWeatherPressure() {
+    renderWeatherDescription() {
         return this
             .state
             .weather
-            .map(weather => <Weather key={state.weather.icon} weather={icon}
+            .map(weather => <Weather key={state.weather.weather.description} weather={icon}
             />);
     }
     render() {
-        // console.log(this.state.weather)
+        console.log(this.state.weather)
         return (
             <View>
-                <Text style={styles.weatherDetail}>Current Temperature: {(+this.state.weather.main.temp).toFixed()} &#8457;</Text>
                 <Text style={styles.weatherDetail}>
+                  {/* Current Temperature:  */}
+                  {(+this.state.weather.main.temp).toFixed()} &#8457;</Text>
+                {/* <Text style={styles.weatherDetail}>
                 Clear Skys
                 </Text>
                 <Text style={styles.weatherDetail}>
             Icon will go here {this.state.weather.main.icon}
-            </Text>
+            </Text> */}
 
             </View>
 

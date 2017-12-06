@@ -14,6 +14,7 @@ export default class App extends React.Component {
       removeSearch: true,
       data:[],
       activeSecond: false,
+      zip: ''
       // toggleStyle: false
     }
 
@@ -29,6 +30,9 @@ export default class App extends React.Component {
   //Filters returned rooftops by zipcode
   findbyZip = (zip) => {
     let zipData = this.state.data
+    let zipArr = this.state.zip
+    zipArr = zip    
+    this.setState({zip: zipArr})   
     let arr = []
     for (let i = 0; i< zipData.length; i++){
       if(zipData[i].zipcode === (+zip)){
@@ -47,6 +51,7 @@ export default class App extends React.Component {
   //Removes Search bar and goes to second page
   gotoRoofstops = () => {
     this.setState({activeSecond: true, removeSearch: false})
+    
   }
 
   //Send Logo to Home Screen
@@ -66,7 +71,7 @@ export default class App extends React.Component {
               }
 
               {
-                this.state.activeSecond ? <SecondPage data={this.state.data}/> : null
+                this.state.activeSecond ? <SecondPage data={this.state.data} zip={this.state.zip}/> : null
               }
 
             </ScrollView>
