@@ -17,9 +17,12 @@ export default class ThirdPage extends React.Component {
     return (
 
       <ScrollView>
-      <Button small title='Back' backgroundColor ={'#397af8'} onPress={this.props.returnToPrevious} />
-      <IndividualRooftopInfo data={this.props.singleRoofData}/>
-      <Review />
+        <IndividualRooftopInfo data={this.props.singleRoofData}/>
+        <Review />
+        <Button small
+          title='Back'
+          backgroundColor ={'#1B998B'}
+          onPress={this.props.returnToPrevious} />
       </ScrollView>
     )
   }

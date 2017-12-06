@@ -47,7 +47,7 @@ export default class SecondPage extends React.Component{
             }
 
             {
-              this.state.weatherComponent ? <Weather /> : null
+              this.state.weatherComponent ? <Weather zip={this.props.zip}/> : null
             }
 
             {
