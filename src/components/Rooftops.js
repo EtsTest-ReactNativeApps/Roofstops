@@ -13,14 +13,6 @@ constructor(props){
   render() {
     return (
       <View style={styles.container}>
-        {/* <Navi
-          initialRoute={{
-            component: Navi,
-            title: 'Roof Stops'
-          }}
-          style={styles.container}
-        /> */}
-
 
         <Text style={styles.roofstopsTitle}>Rooftops Near You</Text>
           {this.props.data.map(listItems =>
@@ -46,8 +38,8 @@ const styles = StyleSheet.create({
   roofstopsTitle: {
     fontSize: 24,
     marginBottom: 10,
-    // color: '#262B2B',
-    color: '#ED9B40',
+    color: '#046C87',
+    // color: '#ED9B40',
   },
   listItemName: {
     fontSize: 20,
