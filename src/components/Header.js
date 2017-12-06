@@ -8,7 +8,7 @@ const Header = (props) => (
         style ={{
           marginTop:50, marginBottom:10
         }}
-        source={require("../../images/roofstops-logo-2.png")}/>
+        source={require("../../images/roofstops-logo-3.png")}/>
     </TouchableOpacity>
   </View>
         )
