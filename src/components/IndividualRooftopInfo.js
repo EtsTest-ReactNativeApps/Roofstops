@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, Image, Linking, TouchableHighlight } from 'react-native';
+import call from 'react-native-phone-call'
 
 export default class IndividualRooftopInfo extends React.Component {
   constructor(props){
@@ -7,6 +8,9 @@ export default class IndividualRooftopInfo extends React.Component {
   }
 
   render(){
+    const args = {
+      number: this.props.data.phone, // String value with the number to call
+    }
     return(
       <View>
           <ScrollView contentContainerStyle={styles.contentContainer}>
@@ -22,7 +26,10 @@ export default class IndividualRooftopInfo extends React.Component {
               <Text style={styles.details}>{this.props.data.regular}</Text>
               <Text style={styles.hours}>Happy Hour</Text>
               <Text style={styles.details}>{this.props.data.happy}</Text>
-              <Text style={styles.phone}>{this.props.data.phone}</Text>
+              <Text
+                style={styles.phone}
+                onPress={() => call(args)}> {this.props.data.phone}
+              </Text>
 
             <TouchableHighlight style={styles.button} underlayColor="white">
               <Text style={styles.website}
@@ -74,6 +81,7 @@ const styles = StyleSheet.create({
     color: '#F4F7F4',
     paddingBottom: 5,
     paddingTop: 5,
+    textDecorationLine: 'underline'
   },
   website: {
     color: '#F4F7F4',
