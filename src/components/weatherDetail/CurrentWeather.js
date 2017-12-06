@@ -18,7 +18,7 @@ export default class CurrentWeather extends Component {
     }
     componentWillMount() {
         axios
-            .get('https://api.openweathermap.org/data/2.5/weather?zip=80202,us&mode=json&units=imperial&APPID=36e3c356af81e9b65b59a0df8a0b70e1')
+            .get(`https://api.openweathermap.org/data/2.5/weather?zip=${this.props.zip},us&mode=json&units=imperial&APPID=36e3c356af81e9b65b59a0df8a0b70e1`)
             .then(response => this.setState({weather: response.data}));
     }
 
