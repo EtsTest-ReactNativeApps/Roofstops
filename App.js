@@ -44,7 +44,7 @@ gotoRoofstops = () => {
 
 homeScreen = (e) => {
 
-  this.setState({removeSearch: true, Roofstops:false, weatherComponent: false})
+  this.setState({removeSearch: true, Roofstops:false, weatherComponent: false, singleRoof:false})
 }
   singleRooftop = (listItems) => {
     console.log('here', listItems)
