@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
   roofstopsTitle: {
     fontSize: 20,
     marginBottom: 10,
-    color: '#1B998B',
+    color: '#F4F7F4',
   },
   listItemName: {
     fontSize: 20,
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Avenir-Light',
   },
   button: {
-    backgroundColor: '#6F65AE',
+    backgroundColor: '#1B998B',
     height: 45,
     width: 160,
     marginTop: 10,
