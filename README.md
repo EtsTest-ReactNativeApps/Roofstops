@@ -1,4 +1,4 @@
-![Roofstops](https://github.com/Roofstops/Roofstops/blob/master/images/logoreadme.png =250x100 "Roofstops")
+![Roofstops](https://github.com/Roofstops/Roofstops/blob/master/images/logoreadme.png =250x100)
 # Roofstops.com
 
 "Roofstops Worth The Stop" Roofstops is an app to find rooftop bars and patios nearest you!
@@ -17,10 +17,10 @@ cd into project folder Roofstops
 npm install
 ```
 ### Screenshots
-![Roofstops](https://github.com/Roofstops/Roofstops/blob/master/images/1.png =400x800 "Roofstops")
-![Roofstops](https://github.com/Roofstops/Roofstops/blob/master/images/2.png =400x800 "Roofstops")
-![Roofstops](https://github.com/Roofstops/Roofstops/blob/master/images/3.png =400x800 "Roofstops")
-![Roofstops](https://github.com/Roofstops/Roofstops/blob/master/images/4.png =400x800 "Roofstops")
+![Roofstops](https://github.com/Roofstops/Roofstops/blob/master/images/1.png =400x800)
+![Roofstops](https://github.com/Roofstops/Roofstops/blob/master/images/2.png =400x800)
+![Roofstops](https://github.com/Roofstops/Roofstops/blob/master/images/3.png =400x800)
+![Roofstops](https://github.com/Roofstops/Roofstops/blob/master/images/4.png =400x800)
 
 ### Walkthrough Video
 
