@@ -9,7 +9,6 @@ export default class CurrentWeather extends Component {
         super(props)
         this.state = {
             weather: {
-
                 main: {
                     temp: 'Updating...',
                     description: 'Desc'
@@ -29,23 +28,13 @@ export default class CurrentWeather extends Component {
             .weather
             .map(weather => <Weather key={state.weather.main.temp} weather={temp}/>);
     }
-    renderWeatherDescription() {
-        return this
-            .state
-            .weather
-            .map(weather => <Weather key={state.weather.weather.description} weather={icon}/>);
-    }
     render() {
-
         return (
             <View>
                 <Text style={styles.weatherDetail}>
-
                     {(+ this.state.weather.main.temp).toFixed()}
                     &#8457;</Text>
-
             </View>
-
         );
     }
 }
