@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Avenir-Light',
   },
   button: {
-    backgroundColor: '#16B073',
+    backgroundColor: '#1B998B',
     height: 45,
     width: 160,
     marginTop: 10,
