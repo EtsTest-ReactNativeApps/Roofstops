@@ -42,8 +42,8 @@ export default class LandingSearch extends React.Component {
         {/* <Text style={styles.text}>Enter Your Zipcode</Text> */}
         <View style={styles.mainContainer}>
           <Sae style={styles.width}
-            label={'zipcode'}
-            iconClass={FontAwesomeIcon} iconName={'pencil'} iconColor={'#6F65AE'} autoCapitalize={'none'} autoCorrect={false} keyboardType="numeric" onChange={this.handleSearch.bind(this)} maxLength={5} value={this.state.zipcode} />
+            label={'zipcode'} labelStyle={{color: '#1B998B'}}
+            iconClass={FontAwesomeIcon} iconName={'pencil'} iconColor={'#1B998B'} autoCapitalize={'none'} autoCorrect={false} keyboardType="numeric" onChange={this.handleSearch.bind(this)} maxLength={5} value={this.state.zipcode} />
           <TouchableHighlight
             style={styles.button}
             onPress={this.handleSubmit.bind(this)}
@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   },
   button: {
-    backgroundColor: '#6F65AE',
+    backgroundColor: '#1B998B',
     height: 50,
     width: 200,
     marginTop: 10,
