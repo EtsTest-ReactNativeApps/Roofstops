@@ -39,9 +39,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   roofstopsTitle: {
-    fontSize: 24,
+    fontSize: 20,
     marginBottom: 10,
-    color: '#F4F7F4',
+    color: '#1B998B',
   },
   listItemName: {
     fontSize: 20,
