@@ -70,7 +70,7 @@ export default class App extends React.Component {
               }
 
               {
-                this.state.activeSecond ? <SecondPage data={this.state.data} zip={this.state.zip}/> : null
+                this.state.activeSecond ? <SecondPage data={this.state.data} zip={this.state.zip} homeScreen ={this.homeScreen}/> : null
               }
 
             </ScrollView>

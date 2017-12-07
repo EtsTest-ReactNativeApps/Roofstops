@@ -60,23 +60,27 @@ const styles = StyleSheet.create({
   },
   hours: {
     fontWeight: 'bold',
+    fontFamily: 'Avenir-Light',
     fontSize: 18,
     textAlign: 'center',
     color: '#F4F7F4',
   },
   details: {
     fontSize: 18,
+    fontFamily: 'Avenir-Light',
     textAlign: 'center',
     color: '#F4F7F4',
     paddingBottom: 10,
   },
   address: {
     fontSize: 18,
+    fontFamily: 'Avenir-Light',
     textAlign: 'center',
     color: '#F4F7F4',
   },
   phone: {
     fontSize: 18,
+    fontFamily: 'Avenir-Light',
     textAlign: 'center',
     color: '#F4F7F4',
     paddingBottom: 5,
@@ -86,6 +90,7 @@ const styles = StyleSheet.create({
   website: {
     color: '#F4F7F4',
     fontSize: 18,
+    fontFamily: 'Avenir-Light',
     alignSelf: 'center',
   },
   button: {

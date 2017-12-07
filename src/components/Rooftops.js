@@ -13,7 +13,7 @@ constructor(props){
     return (
       <View style={styles.container}>
 
-        <Text style={styles.roofstopsTitle}>Rooftops Near You</Text>
+        <Text style={styles.roofstopsTitle}>ROOFTOPS NEAR YOU</Text>
           {this.props.data.map(listItems =>
             <TouchableOpacity  key={listItems.id}>
             <Text style={styles.listItemName} key={listItems.id} onPress={e => this.props.goToSingle(listItems)}>
@@ -22,6 +22,10 @@ constructor(props){
             <Text style={styles.address}>{listItems.address}</Text>
           </TouchableOpacity>
           )}
+
+          <TouchableOpacity style={styles.button} onPress={this.props.homeScreen}>
+            <Text style={styles.buttonText}>New Search</Text>
+          </TouchableOpacity>
 
       </View>
     );
@@ -49,5 +53,22 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginBottom: 10,
     color: '#1B998B',
-  }
+    fontFamily: 'Avenir-Light',
+  },
+  button: {
+    backgroundColor: '#6F65AE',
+    height: 45,
+    width: 160,
+    marginTop: 10,
+    marginLeft: 5,
+    borderRadius: 4,
+    justifyContent: 'center',
+    marginBottom: 10
+  },
+  buttonText: {
+      color: '#F4F7F4',
+      fontSize: 18,
+      fontFamily: 'Avenir-Light',
+      alignSelf: 'center',
+  },
 });

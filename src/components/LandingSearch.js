@@ -43,7 +43,7 @@ export default class LandingSearch extends React.Component {
         <View style={styles.mainContainer}>
           <Sae style={styles.width}
             label={'zipcode'}
-            iconClass={FontAwesomeIcon} iconName={'map-marker'} iconColor={'#6F65AE'} autoCapitalize={'none'} autoCorrect={false} keyboardType="numeric" onChange={this.handleSearch.bind(this)} maxLength={5} value={this.state.zipcode} />
+            iconClass={FontAwesomeIcon} iconName={'pencil'} iconColor={'#6F65AE'} autoCapitalize={'none'} autoCorrect={false} keyboardType="numeric" onChange={this.handleSearch.bind(this)} maxLength={5} value={this.state.zipcode} />
           <TouchableHighlight
             style={styles.button}
             onPress={this.handleSubmit.bind(this)}
@@ -51,6 +51,7 @@ export default class LandingSearch extends React.Component {
           <Text style={styles.buttonText}>SEARCH</Text>
         </TouchableHighlight>
         </View>
+
       </View>
     )
   }
@@ -61,13 +62,14 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    paddingTop: 50,
   },
   tagline: {
     color: '#F3FFF8',
-    fontSize: 20,
+    fontSize: 38,
+    fontFamily: 'Savoye LET',
     textAlign: 'center',
-    paddingBottom: 10,
-    paddingTop: 50,
+    paddingTop: 10,
     justifyContent: 'center'
   },
   text: {
@@ -75,7 +77,6 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: 'center',
     paddingBottom: 10,
-    // paddingTop: 50,
     justifyContent: 'center'
   },
   input: {
@@ -91,8 +92,8 @@ const styles = StyleSheet.create({
   },
   button: {
     backgroundColor: '#6F65AE',
-    height: 45,
-    width: 100,
+    height: 50,
+    width: 200,
     marginTop: 10,
     marginLeft: 5,
     borderRadius: 4,
@@ -105,7 +106,7 @@ const styles = StyleSheet.create({
     fontSize: 18
   },
   width:{
-    width: 100,
+    width: 200,
     marginLeft: 20,
     marginBottom:10,
     marginRight: 15,

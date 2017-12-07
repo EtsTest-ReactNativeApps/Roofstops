@@ -16,7 +16,7 @@ export default class ThirdPage extends React.Component {
       <View>
         <ScrollView>
           <IndividualRooftopInfo data={this.props.singleRoofData}/>
-          <Review />
+          {/* <Review /> */}
         </ScrollView>
 
         <ScrollView contentContainerStyle={styles.contentContainer}>

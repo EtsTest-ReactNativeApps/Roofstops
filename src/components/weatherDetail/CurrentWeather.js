@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { StyleSheet, ScrollView, View, Text, weatherDetail } from 'react-native';
 import Button from './Button';
 import axios from 'axios';
+import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome'
+
 
 export default class CurrentWeather extends Component {
     constructor(props) {
@@ -37,7 +39,7 @@ export default class CurrentWeather extends Component {
             />);
     }
     render() {
-        console.log(this.state.weather)
+        // console.log(this.state.weather)
         return (
             <View>
                 <Text style={styles.weatherDetail}>
