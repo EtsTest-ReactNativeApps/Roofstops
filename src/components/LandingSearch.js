@@ -38,7 +38,7 @@ export default class LandingSearch extends React.Component {
   render() {
     return (
       <View>
-        <Text style={styles.tagline}>Rooftops Worth The Stop</Text>
+        <Text style={styles.tagline}>"Rooftops Worth The Stop"</Text>
         {/* <Text style={styles.text}>Enter Your Zipcode</Text> */}
         <View style={styles.mainContainer}>
           <Sae style={styles.width}
@@ -66,8 +66,9 @@ const styles = StyleSheet.create({
   },
   tagline: {
     color: '#F3FFF8',
-    fontSize: 38,
-    fontFamily: 'Savoye LET',
+    fontSize: 24,
+    // fontFamily: 'Savoye LET',
+    fontFamily: 'Avenir-Light',
     textAlign: 'center',
     paddingTop: 10,
     justifyContent: 'center'
