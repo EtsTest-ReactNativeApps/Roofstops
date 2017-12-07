@@ -1,3 +1,4 @@
+![Roofstops](logo "Roofstops")
 # Roofstops.com
 
 "Roofstops Worth The Stop" Roofstops is an app to find rooftop bars and patios nearest you!
