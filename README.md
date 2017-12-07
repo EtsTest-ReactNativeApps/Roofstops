@@ -20,7 +20,7 @@ npm install
 ![Roofstops](https://github.com/Roofstops/Roofstops/blob/master/images/1.png = 400x800)
 ![Roofstops](https://github.com/Roofstops/Roofstops/blob/master/images/2.png = 400x800)
 ![Roofstops](https://github.com/Roofstops/Roofstops/blob/master/images/3.png = 400x800)
-![Roofstops](https://github.com/Roofstops/Roofstops/blob/master/images/4.png =4 00x800)
+![Roofstops](https://github.com/Roofstops/Roofstops/blob/master/images/4.png = 400x800)
 
 ### Walkthrough Video
 
