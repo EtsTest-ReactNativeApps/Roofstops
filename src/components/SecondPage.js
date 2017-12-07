@@ -43,7 +43,7 @@ export default class SecondPage extends React.Component{
           <ScrollView>
 
             {
-              this.state.Roofstops ? <Rooftops data={this.props.data} goToSingle ={this.singleRooftop} homeScreen={this.props.homeScreen}/> : null
+              this.state.Roofstops ? <Rooftops data={this.props.data} goToSingle ={this.singleRooftop} homeScreen={this.props.homeScreen} zip={this.props.zip}/> : null
             }
 
             {

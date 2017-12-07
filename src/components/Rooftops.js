@@ -13,7 +13,7 @@ constructor(props){
     return (
       <View style={styles.container}>
 
-        <Text style={styles.roofstopsTitle}>Rooftops near {this.props.data[0].zipcode}</Text>
+        <Text style={styles.roofstopsTitle}>Rooftops near {this.props.zip}</Text>
           {this.props.data.map(listItems =>
             <TouchableOpacity  key={listItems.id}>
             <Text style={styles.listItemName} key={listItems.id} onPress={e => this.props.goToSingle(listItems)}>
