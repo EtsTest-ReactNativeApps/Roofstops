@@ -1,16 +1,14 @@
-import React, { Component } from 'react';
-import { StyleSheet, ScrollView, View, Text, weatherDetail } from 'react-native';
+import React, {Component} from 'react';
+import {StyleSheet, ScrollView, View, Text, weatherDetail} from 'react-native';
 import Button from './Button';
 import axios from 'axios';
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome'
-
 
 export default class CurrentWeather extends Component {
     constructor(props) {
         super(props)
         this.state = {
             weather: {
-
                 main: {
                     temp: 'Updating...',
                     description: 'Desc'
@@ -28,36 +26,18 @@ export default class CurrentWeather extends Component {
         return this
             .state
             .weather
-            .map(weather => <Weather key={state.weather.main.temp} weather={temp}
-            />);
-    }
-    renderWeatherDescription() {
-        return this
-            .state
-            .weather
-            .map(weather => <Weather key={state.weather.weather.description} weather={icon}
-            />);
+            .map(weather => <Weather key={state.weather.main.temp} weather={temp}/>);
     }
     render() {
-        // console.log(this.state.weather)
         return (
             <View>
                 <Text style={styles.weatherDetail}>
-                  {/* Current Temperature:  */}
-                  {(+this.state.weather.main.temp).toFixed()} &#8457;</Text>
-                {/* <Text style={styles.weatherDetail}>
-                Clear Skys
-                </Text>
-                <Text style={styles.weatherDetail}>
-            Icon will go here {this.state.weather.main.icon}
-            </Text> */}
-
+                    {(+ this.state.weather.main.temp).toFixed()}
+                    &#8457;</Text>
             </View>
-
         );
     }
 }
-
 
 const styles = {
     weatherDetail: {
@@ -66,6 +46,6 @@ const styles = {
         flex: 1,
         flexDirection: 'column',
         justifyContent: 'center',
-        alignItems: 'center',
+        alignItems: 'center'
     }
 };

@@ -13,7 +13,7 @@ constructor(props){
     return (
       <View style={styles.container}>
 
-        <Text style={styles.roofstopsTitle}>ROOFTOPS NEAR YOU</Text>
+        <Text style={styles.roofstopsTitle}>Rooftops near {this.props.data[0].zipcode}</Text>
           {this.props.data.map(listItems =>
             <TouchableOpacity  key={listItems.id}>
             <Text style={styles.listItemName} key={listItems.id} onPress={e => this.props.goToSingle(listItems)}>
@@ -39,9 +39,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   roofstopsTitle: {
-    fontSize: 24,
+    fontSize: 20,
     marginBottom: 10,
-    color: '#F4F7F4',
+    color: '#1B998B',
   },
   listItemName: {
     fontSize: 20,
