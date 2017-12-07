@@ -1,4 +1,4 @@
-![Roofstops](logo "Roofstops")
+![Roofstops](https://github.com/Roofstops/Roofstops/blob/master/images/logoreadme.png "Roofstops")
 # Roofstops.com
 
 "Roofstops Worth The Stop" Roofstops is an app to find rooftop bars and patios nearest you!
@@ -16,6 +16,11 @@ git clone repository
 cd into project folder Roofstops
 npm install
 ```
+### Screenshots
+![Roofstops](https://github.com/Roofstops/Roofstops/blob/master/images/1.png "Roofstops")
+![Roofstops](https://github.com/Roofstops/Roofstops/blob/master/images/2.png "Roofstops")
+![Roofstops](https://github.com/Roofstops/Roofstops/blob/master/images/3.png "Roofstops")
+![Roofstops](https://github.com/Roofstops/Roofstops/blob/master/images/4.png "Roofstops")
 
 ### Walkthrough Video
 
