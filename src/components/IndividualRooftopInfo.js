@@ -21,6 +21,10 @@ export default class IndividualRooftopInfo extends React.Component {
 
               <Text style={styles.name}>{this.props.data.name}</Text>
               <Text style={styles.address}>{this.props.data.address}  {this.props.data.city}, {this.props.data.zipcode}</Text>
+              <TouchableHighlight style={styles.button} underlayColor="white">
+                <Text style={styles.website}
+                  onPress={() => Linking.openURL(this.props.data.googleUrl)}>Map View</Text>
+              </TouchableHighlight>
               <Text style={styles.details}></Text>
               <Text style={styles.hours}>Regular Hours</Text>
               <Text style={styles.details}>{this.props.data.regular}</Text>
