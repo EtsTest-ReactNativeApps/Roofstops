@@ -15,10 +15,10 @@ const Header = (props) => (
 
 const styles = StyleSheet.create({
 container: {
-  flex: 1,
-  backgroundColor: '#262B2B',
+  flex: 0.2,
   alignItems: 'center',
   justifyContent: 'center',
+  height: 80,
 },
 imageStyle: {
   marginTop: 40,

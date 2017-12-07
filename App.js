@@ -63,8 +63,9 @@ export default class App extends React.Component {
     return (
 
           <View style={[styles.container, this.state.toggleStyle && styles.containerTwo]}>
+            <Header homeScreen ={this.homeScreen}/>
             <ScrollView>
-              <Header homeScreen ={this.homeScreen}/>
+
               {
                 this.state.removeSearch ? <LandingSearch gotoRoofstops = {this.gotoRoofstops} findbyZip = {this.findbyZip}/> :  null
               }
