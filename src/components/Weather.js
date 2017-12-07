@@ -1,9 +1,6 @@
 import React from 'react';
 import { Styles, View, Text, headerTextStyle, Image, centerThings } from 'react-native';
 import CurrentWeather from './weatherDetail/CurrentWeather';
-import FiveDayWeather from './weatherDetail/FivedayWeather';
-import ThreeHourWeather from './weatherDetail/ThreeHourWeather';
-
 
 export default class Weather extends React.Component {
     render() {
