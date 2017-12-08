@@ -12,7 +12,7 @@
 ### App Walkthrough
 ![Roofstops](https://github.com/Roofstops/Roofstops/blob/master/images/walkthrough.gif)
 
-### Installation
+### Installation to run Locally
 
 * Download & Install [XCODE](https://developer.apple.com/xcode/)
 * Download & Install [Expo Iphone App](https://itunes.apple.com/us/app/expo-client/id982107779?mt=8)
