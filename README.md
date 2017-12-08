@@ -48,14 +48,14 @@ Open Expo app to scan QR code that generated from using npm start command
 
 ## Project Team Members
 
-* **Paul Rodriguez** 
-* **Makayla Clausen**
+* **Paul Rodriguez** [![Paul](https://github.com/Roofstops/Roofstops/blob/master/images/li.png)](https://www.linkedin.com/in/prdesignwork/)[![Paul](https://github.com/Roofstops/Roofstops/blob/master/images/gh.png)](https://github.com/prdesignwork)
+* **Makayla Clausen** [![Makayla](https://github.com/Roofstops/Roofstops/blob/master/images/li.png)](https://www.linkedin.com/in/mclausen792/)[![Makayla](https://github.com/Roofstops/Roofstops/blob/master/images/gh.png)](https://github.com/mclausen792)
 * **Beth Jaworski** [![Beth](https://github.com/Roofstops/Roofstops/blob/master/images/li.png)](https://www.linkedin.com/in/bethjaw/)[![Beth](https://github.com/Roofstops/Roofstops/blob/master/images/gh.png)](https://github.com/bethjaw)
-* **Shayla Richard** 
-* **Landon Shields** 
-* **Wes Gibler** 
-* **Gavin Brown** 
-* **Josh Leong**
+* **Shayla Richard** [![Shayla](https://github.com/Roofstops/Roofstops/blob/master/images/li.png)](https://www.linkedin.com/in/shaylarichard/)[![Shayla](https://github.com/Roofstops/Roofstops/blob/master/images/gh.png)](https://github.com/Shayla303)
+* **Landon Shields** [![Landon](https://github.com/Roofstops/Roofstops/blob/master/images/li.png)](https://www.linkedin.com/in/landonwshields/)[![Landon](https://github.com/Roofstops/Roofstops/blob/master/images/gh.png)](https://github.com/landonwshields)
+* **Wes Gibler** [![West](https://github.com/Roofstops/Roofstops/blob/master/images/li.png)](https://www.linkedin.com/in/giblerw/)[![Wes](https://github.com/Roofstops/Roofstops/blob/master/images/gh.png)](https://github.com/giblerw)
+* **Gavin Brown** [![Gavin](https://github.com/Roofstops/Roofstops/blob/master/images/li.png)](https://www.linkedin.com/in/geebrown43/)[![Gavin](https://github.com/Roofstops/Roofstops/blob/master/images/gh.png)](https://github.com/geebrown43)
+* **Josh Leong** [![Josh](https://github.com/Roofstops/Roofstops/blob/master/images/li.png)](https://www.linkedin.com/in/joshleong/)[![Josh](https://github.com/Roofstops/Roofstops/blob/master/images/gh.png)](https://github.com/leodotng)
 
 ## License
 
