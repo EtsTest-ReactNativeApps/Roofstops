@@ -50,7 +50,7 @@ Open Expo app to scan QR code that generated from using npm start command
 
 * **Paul Rodriguez** 
 * **Makayla Clausen**
-* **Beth Jaworski** [![Beth](http://futurethink.com/wp-content/uploads/2017/05/Linkedin-logo-1-550x550-300x300.png)](https://www.linkedin.com/in/bethjaw/)
+* **Beth Jaworski** [![Beth](https://github.com/Roofstops/Roofstops/blob/master/images/li.png)](https://www.linkedin.com/in/bethjaw/)[![Beth](https://github.com/Roofstops/Roofstops/blob/master/images/gh.png))](https://github.com/bethjaw)
 * **Shayla Richard** 
 * **Landon Shields** 
 * **Wes Gibler** 
