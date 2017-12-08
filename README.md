@@ -3,8 +3,13 @@
 
 "Roofstops Worth The Stop" Roofstops is an app to find rooftop bars and patios nearest you!
 
-### Installation
+### App Screenshots
+![Roofstops](https://github.com/Roofstops/Roofstops/blob/master/images/1.png)
+![Roofstops](https://github.com/Roofstops/Roofstops/blob/master/images/2.png)
+![Roofstops](https://github.com/Roofstops/Roofstops/blob/master/images/3.png)
+![Roofstops](https://github.com/Roofstops/Roofstops/blob/master/images/4.png)
 
+### Installation
 
 * Download [XCODE](https://developer.apple.com/xcode/)
 * Download [Expo Iphone App](https://itunes.apple.com/us/app/expo-client/id982107779?mt=8)
@@ -15,12 +20,11 @@ npm install -g create-react-native-app
 git clone repository
 cd into project folder Roofstops
 npm install
+npm start
 ```
-### Screenshots
-![Roofstops](https://github.com/Roofstops/Roofstops/blob/master/images/1.png)
-![Roofstops](https://github.com/Roofstops/Roofstops/blob/master/images/2.png)
-![Roofstops](https://github.com/Roofstops/Roofstops/blob/master/images/3.png)
-![Roofstops](https://github.com/Roofstops/Roofstops/blob/master/images/4.png)
+### Run App in Expo Process
+![QR code](https://github.com/Roofstops/Roofstops/blob/master/images/qr.png)
+![Expo App](https://github.com/Roofstops/Roofstops/blob/master/images/expo.png)
 
 ### Walkthrough Video
 
