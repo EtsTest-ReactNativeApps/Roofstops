@@ -9,6 +9,9 @@
 ![Roofstops](https://github.com/Roofstops/Roofstops/blob/master/images/3.png)
 ![Roofstops](https://github.com/Roofstops/Roofstops/blob/master/images/4.png)
 
+### App Walkthrough
+![Roofstops](https://github.com/Roofstops/Roofstops/blob/master/images/walkthrough.gif)
+
 ### Installation
 
 * Download [XCODE](https://developer.apple.com/xcode/)
