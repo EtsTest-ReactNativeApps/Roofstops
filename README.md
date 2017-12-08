@@ -1,5 +1,5 @@
 ![Roofstops](https://github.com/Roofstops/Roofstops/blob/master/images/logoreadme.png)
-# ⭐️Roofstops.com⭐️ ![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)![License](https://img.shields.io/badge/license-MIT-blue.svg)
+# ⭐️Roofstops.com⭐️ ![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)![License](https://img.shields.io/badge/license-MIT-blue.svg)[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 "Roofstops Worth The Stop" Roofstops is a new app to find rooftop bars and patios nearest you!
 
