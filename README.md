@@ -37,7 +37,7 @@ Open Expo app to scan QR code that generated from using npm start command
 * [ReactNative](https://facebook.github.io/react-native/docs/getting-started.html) - Create React Native App is the easiest way to start building a new React Native application.
 * [Roofstops API](https://thawing-anchorage-35743.herokuapp.com/api/locations) - Roofstops API built by Shayla Richard
 * [ReactNative Maps Airbnb](https://github.com/react-community/react-native-maps) - React Native Mapview component for iOS + Android
-* [OpeanWeatherMaps API](https://openweathermap.org/)Get current weather, daily forecast for 16 days, and 3-hourly forecast 5 days for your city. Helpful stats, graphics, and this day in history charts are available for your reference. Interactive maps show precipitation, clouds, pressure, wind around your location.
+* [OpeanWeatherMaps API](https://openweathermap.org/) - Get current weather, daily forecast for 16 days, and 3-hourly forecast 5 days for your city. Helpful stats, graphics, and this day in history charts are available for your reference. Interactive maps show precipitation, clouds, pressure, wind around your location.
 * [React Native Elements](https://github.com/react-native-training/react-native-elements) Cross Platform React Native UI Toolkit
 * [React Native Gesture Handler](https://github.com/kmagiera/react-native-gesture-handler) New declarative API for gesture handling in react-native
 * [React Native Phone Call](https://github.com/tiaanduplessis/react-native-phone-call) Initiate a phone call in React Native
