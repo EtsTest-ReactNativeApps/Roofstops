@@ -32,12 +32,6 @@ Open Expo app to scan QR code that generated from using npm start command
 ![QR code](https://github.com/Roofstops/Roofstops/blob/master/images/qr.png)
 ![Expo App](https://github.com/Roofstops/Roofstops/blob/master/images/expo.png)
 
-### Walkthrough Video
-
-```
-[Youtube](https://youtube.com)
-```
-
 ## Built With
 
 * [ReactNative](https://facebook.github.io/react-native/docs/getting-started.html) - Create React Native App is the easiest way to start building a new React Native application.
@@ -56,7 +50,7 @@ Open Expo app to scan QR code that generated from using npm start command
 
 * **Paul Rodriguez** 
 * **Makayla Clausen**
-* **Beth Jaworski** 
+* **Beth Jaworski** (http://futurethink.com/wp-content/uploads/2017/05/Linkedin-logo-1-550x550-300x300.png)(https://www.linkedin.com/in/bethjaw/)
 * **Shayla Richard** 
 * **Landon Shields** 
 * **Wes Gibler** 
