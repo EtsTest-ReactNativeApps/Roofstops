@@ -35,7 +35,7 @@ Open Expo app to scan QR code that generated from using npm start command
 ## Built With
 
 * [ReactNative](https://facebook.github.io/react-native/docs/getting-started.html) - Create React Native App is the easiest way to start building a new React Native application.
-* [Roofstops API](https://thawing-anchorage-35743.herokuapp.com/api/locations) - Roofstops API built by Shayla Richard & ![forthebadge](http://forthebadge.com/badges/built-with-love.svg)
+* [Roofstops API](https://thawing-anchorage-35743.herokuapp.com/api/locations) - Roofstops API ![forthebadge](http://forthebadge.com/badges/built-with-love.svg) by Shayla Richard.
 * [ReactNative Maps Airbnb](https://github.com/react-community/react-native-maps) - React Native Mapview component for iOS + Android
 * [OpeanWeatherMaps API](https://openweathermap.org/) - Get current weather, daily forecast for 16 days, and 3-hourly forecast 5 days for your city. Helpful stats, graphics, and this day in history charts are available for your reference. Interactive maps show precipitation, clouds, pressure, wind around your location.
 * [React Native Elements](https://github.com/react-native-training/react-native-elements) Cross Platform React Native UI Toolkit
@@ -44,7 +44,7 @@ Open Expo app to scan QR code that generated from using npm start command
 * [React Native Tab View](https://github.com/react-native-community/react-native-tab-view) A cross-platform Tab View component for React Native
 * [React Native Text Input Effects](https://github.com/halilb/react-native-textinput-effects) Text inputs with custom label and icon animations for iOS and android. Built with react native and inspired by Codrops.
 * [React Native Vector Icons](https://github.com/oblador/react-native-vector-icons) Customizable Icons for React Native with support for NavBar/TabBar/ToolbarAndroid, image source and full styling.
-* [React Navigation](https://github.com/react-community/react-navigation) Learn once, navigate anywhere 
+* [React Navigation](https://github.com/react-community/react-navigation) Learn once, navigate anywhere. 
 
 ## Project Team Members
 
