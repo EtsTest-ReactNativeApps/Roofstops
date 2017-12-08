@@ -25,12 +25,22 @@ cd into project folder Roofstops
 npm install
 npm start
 ```
-### Run App in Expo Process
+### Run App Locally on your machine in Expo
+
 ```
 Open Expo app to scan QR code that generated from using npm start command
 ```
 ![QR code](https://github.com/Roofstops/Roofstops/blob/master/images/qr.png)
 ![Expo App](https://github.com/Roofstops/Roofstops/blob/master/images/expo.png)
+
+### Visit our public Expo URL without any installations
+
+```
+Open Expo app to scan QR code that generated from using npm start command
+```
+![Expo App](https://github.com/Roofstops/Roofstops/blob/master/images/expopublic.png)
+![Public Expo Link](https://expo.io/@geebrown43/roofstops_dnvr)
+
 
 ## Built With
 
