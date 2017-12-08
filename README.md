@@ -37,9 +37,10 @@ Open Expo app to scan QR code that generated from using npm start command
 
 ```
 Open Expo app to scan QR code that generated from using npm start command
+![Public Expo Link](https://expo.io/@geebrown43/roofstops_dnvr)
 ```
 ![Expo App](https://github.com/Roofstops/Roofstops/blob/master/images/expopublic.png)
-![Public Expo Link](https://expo.io/@geebrown43/roofstops_dnvr)
+
 
 
 ## Built With
