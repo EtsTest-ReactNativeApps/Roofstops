@@ -1,7 +1,7 @@
 ![Roofstops](https://github.com/Roofstops/Roofstops/blob/master/images/logoreadme.png)
 # ⭐️Roofstops.com⭐️ ![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-"Roofstops Worth The Stop" Roofstops is an app to find rooftop bars and patios nearest you!
+"Roofstops Worth The Stop" Roofstops is a new app to find rooftop bars and patios nearest you!
 
 ### App Screenshots
 ![Roofstops](https://github.com/Roofstops/Roofstops/blob/master/images/1.png)
@@ -36,7 +36,7 @@ Open Expo app to scan QR code that generated from using npm start command
 ### Visit our public Expo URL without any installations
 
 ```
-Open Expo app to scan QR code that generated from using npm start command
+Open Expo app to scan QR code from our public URL
 ```
 ![Public Expo Link](https://expo.io/@geebrown43/roofstops_dnvr)(https://expo.io/@geebrown43/roofstops_dnvr)
 [![Expo App](https://github.com/Roofstops/Roofstops/blob/master/images/expopublic.png)](https://expo.io/@geebrown43/roofstops_dnvr)
