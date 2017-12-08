@@ -14,9 +14,9 @@
 
 ### Installation
 
-* Download [XCODE](https://developer.apple.com/xcode/)
-* Download [Expo Iphone App](https://itunes.apple.com/us/app/expo-client/id982107779?mt=8)
-* Download [Expo Mac Desktop App](https://github.com/expo/xde/releases)
+* Download & Install [XCODE](https://developer.apple.com/xcode/)
+* Download & Install [Expo Iphone App](https://itunes.apple.com/us/app/expo-client/id982107779?mt=8)
+* Download & Install [Expo Mac Desktop App](https://github.com/expo/xde/releases)
 
 ```
 npm install -g create-react-native-app
