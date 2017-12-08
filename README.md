@@ -23,6 +23,9 @@ npm install
 npm start
 ```
 ### Run App in Expo Process
+```
+Open Expo app to scan QR code that generated from using npm start command
+```
 ![QR code](https://github.com/Roofstops/Roofstops/blob/master/images/qr.png)
 ![Expo App](https://github.com/Roofstops/Roofstops/blob/master/images/expo.png)
 
