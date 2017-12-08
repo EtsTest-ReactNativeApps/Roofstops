@@ -58,6 +58,6 @@ Open Expo app to scan QR code that generated from using npm start command
 * **Josh Leong** [![Josh](https://github.com/Roofstops/Roofstops/blob/master/images/li.png)](https://www.linkedin.com/in/joshleong/)[![Josh](https://github.com/Roofstops/Roofstops/blob/master/images/gh.png)](https://github.com/leodotng)
 
 ## License
-
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
 This project is licensed under the MIT License
 
