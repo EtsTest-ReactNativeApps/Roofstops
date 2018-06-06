@@ -1,6 +1,6 @@
 ![Roofstops](https://github.com/Roofstops/Roofstops/blob/master/images/logoreadme.png)
 # Roofstops.com
-![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)![License](https://img.shields.io/badge/license-MIT-blue.svg)[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)![License](https://img.shields.io/badge/License-MIT-yellow.svg)[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 ReactNativeJS mobile application that helps find rooftop bars and restaurants near you.
 
@@ -70,6 +70,6 @@ Open Expo app to scan QR code from our public URL
 * **Josh Leong** [![Josh](https://github.com/Roofstops/Roofstops/blob/master/images/li.png)](https://www.linkedin.com/in/joshleong/)[![Josh](https://github.com/Roofstops/Roofstops/blob/master/images/gh.png)](https://github.com/leodotng)
 
 ## License
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 This project is licensed under the MIT License
 
