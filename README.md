@@ -1,6 +1,6 @@
 # Roofstops.com
 
-"Roofstops Worth The Stop" Roofstops is an app to find rooftop bars and patios nearest you!
+ReactNativeJS mobile application to find your nearest rooftop bar or restaurant.
 
 ### Installation
 
