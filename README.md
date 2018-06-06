@@ -1,6 +1,6 @@
 # Roofstops.com
 
-"Roofstops Worth The Stop" Roofstops is an app to find rooftop bars and patios nearest you!
+ReactNativeJS mobile application to find your nearest rooftop bar or restaurant.
 
 ### Installation
 
@@ -34,17 +34,17 @@ npm install
 * [React Native Tab View](https://github.com/react-native-community/react-native-tab-view) A cross-platform Tab View component for React Native
 * [React Native Text Input Effects](https://github.com/halilb/react-native-textinput-effects) Text inputs with custom label and icon animations for iOS and android. Built with react native and inspired by Codrops.
 * [React Native Vector Icons](https://github.com/oblador/react-native-vector-icons) Customizable Icons for React Native with support for NavBar/TabBar/ToolbarAndroid, image source and full styling.
-* [React Navigation](https://github.com/react-community/react-navigation) Learn once, navigate anywhere 
+* [React Navigation](https://github.com/react-community/react-navigation) Learn once, navigate anywhere
 
 ## Project Team Members
 
-* **Paul Rodriguez** 
+* **Paul Rodriguez**
 * **Makayla Clausen**
-* **Beth Jaworski** 
-* **Shayla Richard** 
-* **Landon Shields** 
-* **Wes Gibler** 
-* **Gavin Brown** 
+* **Beth Jaworski**
+* **Shayla Richard**
+* **Landon Shields**
+* **Wes Gibler**
+* **Gavin Brown**
 * **Josh Leong**
 
 ## License
